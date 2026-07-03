@@ -120,8 +120,7 @@ MTBE • META • Combined • Random
 
 }
 
-let mtbeCollapsed = {};
-let metaCollapsed = {};
+let collapsedSections = {};
 
 let currentPage = "";
 
