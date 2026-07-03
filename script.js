@@ -122,16 +122,26 @@ MTBE • META • Combined • Random
 
 let collapsedSections = {};
 
+let currentPage = "";
+
 function toggleSection(sectionName) {
 
     collapsedSections[sectionName] =
         !collapsedSections[sectionName];
 
-    showMTBE();
-    showMeta();
+    if (currentPage === "mtbe") {
+        showMTBE();
+    }
+
+    if (currentPage === "meta") {
+        showMeta();
+    }
 }
 
+
 function showMTBE() {
+
+currentPage = "mtbe";
 
     let html = `
 
@@ -318,6 +328,8 @@ ${i === q.correct ? ' ✅' : ''}
 
 
 function showMeta() {
+
+currentPage = "meta";
 
     let html = `
 
