@@ -147,8 +147,8 @@ input[type="radio"]{
 @media (max-width: 768px){
 
     .module-card{
-        min-width:45% !important;
-        max-width:45% !important;
+        min-width:100% !important;
+        max-width:100% !important;
     }
 
 }
