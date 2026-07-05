@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    max-width:1200px;
+    max-width:1050px;
     margin:auto;
     padding:30px;
 }
@@ -103,9 +103,11 @@ button:hover{
         rgba(15,30,55,0.95)
     );
 
-    border:1px solid rgba(255,255,255,0.08);
 
-    border-left:5px solid #f5a623;
+
+    border-left:2px solid rgba(245,166,35,0.5);
+
+    border:1px solid rgba(245,166,35,0.15);
 
     border-radius:18px;
 
@@ -128,3 +130,17 @@ button:hover{
 input[type="radio"]{
     cursor:pointer;
 }
+
+
+.module-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.5);
+}
+
+
+.action-tile:hover{
+    transform:translateY(-3px);
+    filter:brightness(1.12);
+    box-shadow:0 0 18px rgba(255,255,255,0.15);
+}
+
