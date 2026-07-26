@@ -144,13 +144,44 @@ input[type="radio"]{
     box-shadow:0 0 18px rgba(255,255,255,0.15);
 }
 
-@media (max-width: 768px){
-
-    .module-card{
-        min-width:100% !important;
-        max-width:100% !important;
-         flex:0 0 100% !important;
-    }
-    
+.training-menu{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:25px;
 }
+
+.training-card{
+    background:#0d47a1;
+    width:220px;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.training-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.5);
+}
+
+.training-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.training-title{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.training-description{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
 
