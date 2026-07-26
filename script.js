@@ -5,13 +5,18 @@
 
 function showHome() {
 
+
       document.getElementById("content").innerHTML = `
       <div class="content-box">
 
+                              <!-- DASHBOARD HEADER -->
 <div style="
 text-align:center;
 margin-bottom:10px;
 ">
+
+                              <!-- DASHBOARD TITLE BADGE -->
+
     <div style="
     display:inline-block;
     padding:12px 28px;
@@ -20,11 +25,13 @@ margin-bottom:10px;
     border:1px solid rgba(255,255,255,0.08);    
     font-size:20px;
     font-weight:700;
-
     ">
     🏠 Operations Dashboard
     </div>
+
 </div>
+
+                              <!-- DASHBOARD DESCRIPTION -->
 
 <p style="
 text-align:center;
@@ -37,11 +44,15 @@ margin-bottom:20px;
 Train • Practice • Assess
 </p>
 
+                              <!-- DASHBOARD PAGE TITLE -->
+
 <h2 style="
 margin-bottom:4px;
 ">
 Training Modules
 </h2>
+
+                              <!-- DASHBOARD PAGE SUBTITLE -->
 
 <p style="
 color:#94a3b8;
@@ -51,14 +62,11 @@ margin-top:4px;
 margin-bottom:25px;
 ">
 
-MTBE: ${mtbeQuestions.length} |
-Meta: ${metathesisQuestions.length} |
-Safety: ${safetyQuestions.length} |
-Total: ${mtbeQuestions.length +
-         metathesisQuestions.length +
-         safetyQuestions.length}
+CO • FO • SSV Training Modules
 
 </p>
+
+                              <!-- DASHBOARD MODULE CARDS CONTAINER -->
 
 <div style="
 display:flex;
@@ -66,6 +74,9 @@ flex-wrap:wrap;
 gap:20px;
 margin-top:20px;
 ">
+
+
+
 <!-- ================= MTBE CARD ==================================================================== -->
 
 
@@ -79,136 +90,147 @@ min-height:340px;
 flex:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 transition:0.3s;
-cursor:pointer;
 ">
 
 
-<div style="
-padding-bottom:10px;
-margin-bottom:15px;
-border-bottom:1px solid rgba(255,255,255,0.15);
-text-align:center;
-">
 
-<div style="
-font-size:24px;
-font-weight:bold;
-letter-spacing:1px;
-">
- 📘 MTBE
+
+                              <!-- MTBE MODULE HEADER -->
+
+    <div style="
+    padding-bottom:10px;
+    margin-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+    ">
+
+                              <!-- MTBE MODULE TITLE -->
+
+        <div style="
+        font-size:24px;
+        font-weight:bold;
+        letter-spacing:1px;
+        ">
+        📘 MTBE
+        </div>
+
+        </div>
+
+                              <!-- MTBE ROLE CARD : FO -->
+
+    <div
+    class="action-tile"
+    onclick="setMTBERole('FO')"
+    style="
+    background:#0b3d91;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👷 FO
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Field Operator
+        </div>
+
+    </div>
+
+                              <!-- MTBE ROLE CARD : CO -->
+
+    <div
+    class="action-tile"
+    onclick="setMTBERole('CO')"
+    style="
+    background:#0b3d91;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👨‍💻 CO
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Console Operator
+        </div>
+
+    </div>
+
+                              <!-- MTBE ROLE CARD : SSV -->
+
+    <div
+    class="action-tile"
+    onclick="setMTBERole('SSV')"
+    style="
+    background:#0b3d91;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        🧑‍💼 SSV
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Shift Supervisor
+        </div>
+
+    </div>
+
+                              <!-- MTBE MODULE FOOTER -->
+
+    <p style="
+    font-size:12px;
+    color:#94a3b8;
+    margin-top:15px;
+    text-align:center;
+    letter-spacing:1px;
+    ">
+    Select Position
+    </p>
+
 </div>
 
-</div>
+                     <!-- ============ METATHESIS CARD ============= -->
 
-
-<div
-class="action-tile"
-onclick="showMTBE()"
-style="
-background:#0b3d91;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📚 Question Bank
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Study & Review Questions
-</div>
-
-</div>
-
-<div
-class="action-tile"
-onclick="startMTBE()"
-style="
-background:#0b3d91;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📝 Full Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Complete Assessment
-</div>
-
-</div>
-
-
-<div
-class="action-tile"
-onclick="startRandomMTBEExam()"
-style="
-background:#0b3d91;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-🎲 Random Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Quick Practice
-</div>
-
-</div>
-
-<p style="
-font-size:12px;
-color:#94a3b8;
-margin-top:15px;
-text-align:center;
-letter-spacing:1px;
-">
-Study • Practice • Assess
-</p>
-
-</div>
-
-
-<!-- ================= METATHESIS CARD ==================================================================== -->
 
 
 <div class="module-card" style="
@@ -224,137 +246,143 @@ transition:0.3s;
 cursor:pointer;
 ">
 
+                              <!-- METATHESIS MODULE HEADER -->
 
-<div style="
-padding-bottom:10px;
-margin-bottom:15px;
-border-bottom:1px solid rgba(255,255,255,0.15);
-text-align:center;
-">
+    <div style="
+    padding-bottom:10px;
+    margin-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+    ">
 
-<div style="
-font-size:21px;
-font-weight:bold;
-letter-spacing:1px;
-">
-📗 METATHESIS
+                              <!-- METATHESIS MODULE TITLE -->
+
+        <div style="
+        font-size:21px;
+        font-weight:bold;
+        letter-spacing:1px;
+        ">
+        📗 METATHESIS
+        </div>
+
+    </div>
+
+                              <!-- METATHESIS ROLE CARD : FO -->
+
+    <div
+    class="action-tile"
+    onclick="setMetathesisRole('FO')"
+    style="
+    background:#1f6b2a;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👷 FO
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Field Operator
+        </div>
+
+    </div>
+
+                              <!-- METATHESIS ROLE CARD : CO -->
+
+    <div
+    class="action-tile"
+    onclick="setMetathesisRole('CO')"
+    style="
+    background:#1f6b2a;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👨‍💻 CO
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Console Operator
+        </div>
+
+    </div>
+
+                              <!-- METATHESIS ROLE CARD : SSV -->
+
+    <div
+    class="action-tile"
+    onclick="setMetathesisRole('SSV')"
+    style="
+    background:#1f6b2a;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        🧑‍💼 SSV
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Shift Supervisor
+        </div>
+
+    </div>
+
+                              <!-- METATHESIS MODULE FOOTER -->
+
+    <p style="
+    font-size:12px;
+    color:#94a3b8;
+    margin-top:15px;
+    text-align:center;
+    letter-spacing:1px;
+    ">
+    Select Position
+    </p>
+
 </div>
-
-</div>
-
+                              <!-- ============= SAFETY CARD ============== -->
 
 
-<div
-class="action-tile"
-onclick="showMeta()"
-style="
-background:#1f6b2a;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📚 Question Bank
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Study & Review Questions
-</div>
-
-</div>
-
-
-<div
-class="action-tile"
-onclick="startMetathesis()"
-style="
-background:#1f6b2a;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📝 Full Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Complete Assessment
-</div>
-
-</div>
-
-
-<div
-class="action-tile"
-onclick="startRandomMETATHESISExam()"
-style="
-background:#1f6b2a;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-🎲 Random Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Quick Practice
-</div>
-
-</div>
-
-<p style="
-font-size:12px;
-color:#94a3b8;
-margin-top:15px;
-text-align:center;
-letter-spacing:1px;
-">
-Study • Practice • Assess
-</p>
-
-</div>
-
-<!-- ================= SAFETY CARD ==================================================================== -->
-
-
-
+                                        <!-- SAFETY MODULE CARD -->
 
 <div class="module-card" style="
 background:#be2d1f;
@@ -369,135 +397,142 @@ transition:0.3s;
 cursor:pointer;
 ">
 
+                                         <!-- SAFETY MODULE HEADER -->
 
-<div style="
-padding-bottom:10px;
-margin-bottom:15px;
-border-bottom:1px solid rgba(255,255,255,0.15);
-text-align:center;
-">
+    <div style="
+    padding-bottom:10px;
+    margin-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+    ">
 
-<div style="
-font-size:24px;
-font-weight:bold;
-letter-spacing:1px;
-">
-🦺 SAFETY
+        <!-- SAFETY MODULE TITLE -->
+
+        <div style="
+        font-size:24px;
+        font-weight:bold;
+        letter-spacing:1px;
+        ">
+        🦺 SAFETY
+        </div>
+
+    </div>
+
+                                        <!-- SAFETY QUESTION BANK CARD -->
+
+    <div
+    class="action-tile"
+    onclick="showSafety()"
+    style="
+    background:#a62618;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        📚 Question Bank
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Study & Review Questions
+        </div>
+
+    </div>
+
+                                         <!-- SAFETY FULL EXAM CARD -->
+
+    <div
+    class="action-tile"
+    onclick="startSafety()"
+    style="
+    background:#a62618;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        📝 Full Exam
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Complete Assessment
+        </div>
+
+    </div>
+
+                                        <!-- SAFETY RANDOM EXAM CARD -->
+
+    <div
+    class="action-tile"
+    onclick="startRandomSAFETYExam()"
+    style="
+    background:#a62618;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
+
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        🎲 Random Exam
+        </div>
+
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Quick Practice
+        </div>
+
+    </div>
+
+                                         <!-- SAFETY MODULE FOOTER -->
+
+    <p style="
+    font-size:12px;
+    color:#94a3b8;
+    margin-top:15px;
+    text-align:center;
+    letter-spacing:1px;
+    ">
+    Study • Practice • Assess
+    </p>
+
 </div>
+                                    <!-- ======= Merge CARD ========== -->
 
-</div>
-
-
-<div
-class="action-tile"
-onclick="showSafety()"
-style="
-background:#a62618;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📚 Question Bank
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Study & Review Questions
-</div>
-
-</div>
-
-
-<div
-class="action-tile"
-onclick="startSafety()"
-style="
-background:#a62618;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📝 Full Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Complete Assessment
-</div>
-
-</div>
-
-
-<div
-class="action-tile"
-onclick="startRandomSAFETYExam()"
-style="
-background:#a62618;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
-
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-🎲 Random Exam
-</div>
-
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Quick Practice
-</div>
-
-</div>
-
-<p style="
-font-size:12px;
-color:#94a3b8;
-margin-top:15px;
-text-align:center;
-letter-spacing:1px;
-">
-Study • Practice • Assess
-</p>
-
-</div>
-
-<!-- ================= COMBINED CARD ==================================================================== -->
-
-
+<!-- MERGE MODULE CARD -->
 
 <div class="module-card" style="
 background:#5b21b6;
@@ -512,130 +547,147 @@ transition:0.3s;
 cursor:pointer;
 ">
 
+                                        <!-- MERGE MODULE HEADER -->
 
-<div style="
-padding-bottom:10px;
-margin-bottom:15px;
-border-bottom:1px solid rgba(255,255,255,0.15);
-text-align:center;
-">
+    <div style="
+    padding-bottom:10px;
+    margin-bottom:15px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+    ">
 
-<div style="
-font-size:24px;
-font-weight:bold;
-letter-spacing:1px;
-">
-🎯 COMBINED
-</div>
+                                            <!-- MERGE MODULE TITLE -->
 
-</div>
+        <div style="
+        font-size:24px;
+        font-weight:bold;
+        letter-spacing:1px;
+        ">
+        🎯 MERGE
+        </div>
 
+                                            <!-- MERGE MODULE DESCRIPTION -->
 
-<div
-class="action-tile"
-onclick="showCombinedQuestionBank()"
-style="
-background:#4c1d95;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
+        <div style="
+        font-size:12px;
+        opacity:0.8;
+        margin-top:6px;
+        ">
+        MTBE + META + SAFETY
+        </div>
 
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📚 Question Bank
-</div>
+    </div>
 
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Study All Questions
-</div>
+                                        <!-- MERGE ROLE CARD : FO -->
 
-</div>
+    <div
+    class="action-tile"
+    onclick="setMergeRole('FO')"
+    style="
+    background:#4c1d95;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
 
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👷 FO
+        </div>
 
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Field Operator
+        </div>
 
-<div
-class="action-tile"
-onclick="startCombinedExam()"
-style="
-background:#4c1d95;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
+    </div>
 
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-📝 Full Exam
-</div>
+                                        <!-- MERGE ROLE CARD : CO -->
 
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Complete Assessment
-</div>
+    <div
+    class="action-tile"
+    onclick="setMergeRole('CO')"
+    style="
+    background:#4c1d95;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
 
-</div>
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        👨‍💻 CO
+        </div>
 
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Console Operator
+        </div>
 
-<div
-class="action-tile"
-onclick="startRandomCombinedExam()"
-style="
-background:#4c1d95;
-padding:12px;
-border-radius:10px;
-margin-top:8px;
-cursor:pointer;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 10px rgba(255,255,255,0.05);
-">
+    </div>
 
-<div style="
-font-size:16px;
-font-weight:bold;
-">
-🎲 Random Exam
-</div>
+                                        <!-- MERGE ROLE CARD : SSV -->
 
-<div style="
-font-size:13px;
-opacity:0.85;
-margin-top:4px;
-">
-Quick Practice
-</div>
+    <div
+    class="action-tile"
+    onclick="setMergeRole('SSV')"
+    style="
+    background:#4c1d95;
+    padding:12px;
+    border-radius:10px;
+    margin-top:8px;
+    cursor:pointer;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 10px rgba(255,255,255,0.05);
+    ">
 
-</div>
+        <div style="
+        font-size:16px;
+        font-weight:bold;
+        ">
+        🧑‍💼 SSV
+        </div>
 
-<p style="
-font-size:12px;
-color:#94a3b8;
-margin-top:15px;
-text-align:center;
-letter-spacing:1px;
-">
-MTBE • Metathesis • Safety
-</p>
+        <div style="
+        font-size:13px;
+        opacity:0.85;
+        margin-top:4px;
+        ">
+        Shift Supervisor
+        </div>
+
+    </div>
+
+    <!-- MERGE MODULE FOOTER -->
+
+    <p style="
+    font-size:12px;
+    color:#94a3b8;
+    margin-top:15px;
+    text-align:center;
+    letter-spacing:1px;
+    ">
+    Merge Assessment
+    </p>
 
 </div>
 
@@ -645,9 +697,861 @@ MTBE • Metathesis • Safety
 
 }
 
-      let collapsedSections = {};
+                    /* ================= MTBE ROLES PAGE ================= */
 
-      let currentPage = "";
+
+function showMTBERoles() {
+
+    document.getElementById("content").innerHTML = `
+
+
+                                  <!-- NAVIGATION BUTTONS -->
+
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+                                     <!-- MTBE ROLES PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:10px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+    📘 MTBE
+</h2>
+
+                                 <!-- MTBE ROLES PAGE DESCRIPTION -->
+
+<p style="
+text-align:center;
+color:#94a3b8;
+margin-bottom:30px;
+">
+    Select Your Position
+</p>
+
+                             <!-- MTBE ROLES POSITION CARDS CONTAINER -->
+
+<div class="training-menu">
+
+                              <!-- MTBE ROLES POSITION CARD : FO -->
+
+    <div
+        class="training-card"
+        onclick="setMTBERole('FO')"
+        style="background:#0d47a1;"
+    >
+        <div class="training-icon">👷</div>
+
+        <div class="training-title">
+            FO
+        </div>
+
+        <div class="training-description">
+            Field Operator
+        </div>
+
+                                 <!-- MTBE ROLES POSITION QUESTION COUNT -->
+
+        <div class="training-description" style="
+        margin-top:8px;
+        font-weight:bold;
+        color:#dbeafe;
+        font-size:13px;
+        ">
+            ${mtbeQuestionsFO.length} Questions
+        </div>
+
+            </div>
+
+                               <!-- MTBE ROLES POSITION CARD : CO -->
+
+<div
+    class="training-card"
+    onclick="setMTBERole('CO')"
+    style="background:#0d47a1;"
+>
+
+    <div class="training-icon">👨‍💻</div>
+
+    <div class="training-title">
+        CO
+    </div>
+
+    <div class="training-description">
+        Console Operator
+    </div>
+
+                                   <!-- MTBE ROLES POSITION QUESTION COUNT -->
+
+    <div class="training-description" style="
+    margin-top:6px;
+    font-weight:bold;
+    color:#bfdbfe;
+    ">
+        ${mtbeQuestionsCO.length} Questions
+    </div>
+
+</div>
+
+                                     <!-- MTBE ROLES POSITION CARD : SSV -->
+
+<div
+    class="training-card"
+    onclick="setMTBERole('SSV')"
+    style="background:#0d47a1;"
+>
+
+    <div class="training-icon">🧑‍💼</div>
+
+    <div class="training-title">
+        SSV
+    </div>
+
+    <div class="training-description">
+        Shift Supervisor
+    </div>
+
+                                    <!-- MTBE ROLES POSITION QUESTION COUNT -->
+
+    <div class="training-description" style="
+    margin-top:6px;
+    font-weight:bold;
+    color:#bfdbfe;
+    ">
+        ${mtbeQuestionsSSV.length} Questions
+    </div>
+
+</div>
+
+                                  <!-- MTBE ROLES END POSITION CARDS CONTAINER -->
+
+</div>
+
+</div>
+
+`;
+}
+
+
+function showMetathesisRoles() {
+
+    document.getElementById("content").innerHTML = `
+
+    <div class="content-box">
+
+                                     <!-- METATHESIS ROLES NAVIGATION BUTTONS -->
+
+        <button onclick="showHome()">
+            🏠 Main Dashboard
+        </button>
+
+                                    <!-- METATHESIS ROLES PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:10px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+    📗 METATHESIS
+</h2>
+
+                                  <!-- METATHESIS ROLES PAGE DESCRIPTION -->
+
+<p style="
+text-align:center;
+color:#94a3b8;
+margin-bottom:30px;
+">
+    Select Your Position
+</p>
+
+                              <!-- METATHESIS ROLES POSITION CARDS CONTAINER -->
+
+<div class="training-menu">
+
+                                  <!-- METATHESIS ROLES POSITION CARD : FO -->
+
+
+    <div
+        class="training-card"
+        onclick="setMetathesisRole('FO')"
+        style="background:#2e7d32;"
+    >
+
+        <div class="training-icon">👷</div>
+
+        <div class="training-title">
+            FO
+        </div>
+
+        <div class="training-description">
+            Field Operator
+        </div>
+
+                              <!-- METATHESIS ROLES POSITION QUESTION COUNT -->
+
+
+<div class="training-description" style="
+margin-top:8px;
+font-weight:bold;
+color:#dcfce7;
+font-size:13px;
+">
+    ${metathesisQuestionsFO.length} Questions
+</div>
+
+</div>
+
+<!-- METATHESIS ROLES POSITION CARD : CO -->
+
+<div
+    class="training-card"
+    onclick="setMetathesisRole('CO')"
+    style="background:#2e7d32;"
+>
+
+    <div class="training-icon">👨‍💻</div>
+
+    <div class="training-title">
+        CO
+    </div>
+
+    <div class="training-description">
+        Console Operator
+    </div>
+
+                              <!-- METATHESIS ROLES POSITION QUESTION COUNT -->
+
+
+    <div class="training-description" style="
+    margin-top:8px;
+    font-weight:bold;
+    color:#dcfce7;
+    font-size:13px;
+    ">
+        ${metathesisQuestionsCO.length} Questions
+    </div>
+
+</div>
+
+                              <!-- METATHESIS ROLES POSITION CARD : SSV -->
+
+<div
+    class="training-card"
+    onclick="setMetathesisRole('SSV')"
+    style="background:#2e7d32;"
+>
+
+    <div class="training-icon">🧑‍💼</div>
+
+    <div class="training-title">
+        SSV
+    </div>
+
+    <div class="training-description">
+        Shift Supervisor
+    </div>
+
+                              <!-- METATHESIS ROLES POSITION QUESTION COUNT -->
+
+
+    <div class="training-description" style="
+    margin-top:8px;
+    font-weight:bold;
+    color:#dcfce7;
+    font-size:13px;
+    ">
+        ${metathesisQuestionsSSV.length} Questions
+    </div>
+
+</div>
+
+                              <!-- METATHESIS ROLES END POSITION CARDS CONTAINER -->
+
+</div>
+
+`;
+
+}
+
+
+
+function setMTBERole(role) {
+    currentRole = role;
+    showMTBEMenu();
+}
+
+
+
+
+function showMTBEMenu() {
+
+    document.getElementById("content").innerHTML = `
+
+<div class="content-box">
+
+                              <!-- MTBE MENU NAVIGATION BUTTONS -->
+
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+<button onclick="showMTBERoles()">
+    ↩️ MTBE Dashboard
+</button>
+
+                              <!-- MTBE MENU PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:30px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+📘 MTBE ${currentRole}
+</h2>
+
+                              <!-- MTBE MENU TRAINING CARDS CONTAINER -->
+
+
+<div class="training-menu">
+
+                              <!-- MTBE MENU QUESTION BANK CARD -->
+
+    <div
+        class="training-card"
+        onclick="showMTBE()"
+    >
+        <div class="training-icon">📚</div>
+
+        <div class="training-title">
+            Question Bank
+        </div>
+
+        <div class="training-description">
+            Study & Review Questions
+        </div>
+
+    </div>
+
+                              <!-- MTBE MENU FULL EXAM CARD -->
+
+
+<div
+    class="training-card"
+    onclick="startMTBE()"
+>
+    <div class="training-icon">📝</div>
+
+    <div class="training-title">
+        ${currentRole} Full Exam
+    </div>
+
+    <div class="training-description">
+        Complete Assessment
+    </div>
+
+</div>
+
+                              <!-- MTBE MENU RANDOM EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startRandomMTBEExam()"
+>
+    <div class="training-icon">🎲</div>
+
+    <div class="training-title">
+        ${currentRole} Random Exam
+    </div>
+
+    <div class="training-description">
+        Quick Practice
+    </div>
+
+</div>
+
+                              <!-- MTBE MENU END TRAINING CARDS CONTAINER -->
+
+</div>
+
+</div>
+
+`;
+}
+
+
+function setMetathesisRole(role) {
+    currentRole = role;
+    showMetathesisMenu();
+}
+
+
+function showMetathesisMenu() {
+
+    document.getElementById("content").innerHTML = `
+
+<div class="content-box">
+
+                              <!-- METATHESIS MENU NAVIGATION BUTTONS -->
+
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+<button onclick="showMetathesisRoles()">
+    ↩️ METATHESIS Dashboard
+</button>
+
+                              <!-- METATHESIS MENU PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:30px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+📗 METATHESIS ${currentRole}
+</h2>
+
+                              <!-- METATHESIS MENU TRAINING CARDS CONTAINER -->
+
+<div class="training-menu">
+
+                              <!-- METATHESIS MENU QUESTION BANK CARD -->
+
+    <div
+        class="training-card"
+        onclick="showMeta()"
+        style="background:#2e7d32;"
+    >
+        <div class="training-icon">📚</div>
+
+        <div class="training-title">
+            Question Bank
+        </div>
+
+        <div class="training-description">
+            Study & Review Questions
+        </div>
+
+    </div>
+
+                              <!-- METATHESIS MENU FULL EXAM CARD -->
+
+    <div
+        class="training-card"
+        onclick="startMetathesis()"
+        style="background:#2e7d32;"
+    >
+        <div class="training-icon">📝</div>
+
+        <div class="training-title">
+            ${currentRole} Full Exam
+        </div>
+
+<div class="training-description">
+    Complete Assessment
+</div>
+
+</div>
+
+                              <!-- METATHESIS MENU RANDOM EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startRandomMETATHESISExam()"
+    style="background:#2e7d32;"
+>
+    <div class="training-icon">🎲</div>
+
+    <div class="training-title">
+        ${currentRole} Random Exam
+    </div>
+
+    <div class="training-description">
+        Quick Practice
+    </div>
+
+</div>
+
+                              <!-- METATHESIS MENU END TRAINING CARDS CONTAINER -->
+
+</div>
+
+</div>
+
+`;
+}
+
+
+function showMergeRoles() {
+
+    document.getElementById("content").innerHTML = `
+
+
+<div class="content-box">
+
+                              <!-- MERGE ROLES NAVIGATION BUTTONS -->
+
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+                              <!-- MERGE ROLES PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:10px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+    🎯 MERGE
+</h2>
+
+                              <!-- MERGE ROLES PAGE DESCRIPTION -->
+
+<p style="
+text-align:center;
+color:#94a3b8;
+margin-bottom:30px;
+">
+    MTBE + METATHESIS + SAFETY
+</p>
+
+                              <!-- MERGE ROLES POSITION CARDS CONTAINER -->
+
+<div class="training-menu">
+
+                              <!-- MERGE ROLES POSITION CARD : FO -->
+
+    <div
+        class="training-card"
+        onclick="setMergeRole('FO')"
+        style="background:#5b21b6;"
+    >
+        <div class="training-icon">👷</div>
+
+        <div class="training-title">
+            FO
+        </div>
+
+        <div class="training-description">
+            Field Operator
+        </div>
+
+                              <!-- MERGE ROLES POSITION QUESTION COUNT -->
+
+        <div class="training-description" style="
+        margin-top:8px;
+        font-weight:bold;
+        color:#ddd6fe;
+        font-size:13px;
+        ">
+            ${mtbeQuestionsFO.length + metathesisQuestionsFO.length + safetyQuestions.length} Questions
+        </div>
+
+    </div>
+
+
+
+                              <!-- MERGE ROLES POSITION CARD : CO -->
+
+<div
+    class="training-card"
+    onclick="setMergeRole('CO')"
+    style="background:#5b21b6;"
+>
+
+    <div class="training-icon">👨‍💻</div>
+
+    <div class="training-title">
+        CO
+    </div>
+
+    <div class="training-description">
+        Console Operator
+    </div>
+
+                              <!-- MERGE ROLES POSITION QUESTION COUNT -->
+
+    <div class="training-description" style="
+    margin-top:8px;
+    font-weight:bold;
+    color:#ddd6fe;
+    font-size:13px;
+    ">
+        ${mtbeQuestionsCO.length + metathesisQuestionsCO.length + safetyQuestions.length} Questions
+    </div>
+
+</div>
+
+                              <!-- MERGE ROLES POSITION CARD : SSV -->
+
+<div
+    class="training-card"
+    onclick="setMergeRole('SSV')"
+    style="background:#5b21b6;"
+>
+
+    <div class="training-icon">🧑‍💼</div>
+
+    <div class="training-title">
+        SSV
+    </div>
+
+    <div class="training-description">
+        Shift Supervisor
+    </div>
+
+                              <!-- MERGE ROLES POSITION QUESTION COUNT -->
+
+    <div class="training-description" style="
+    margin-top:8px;
+    font-weight:bold;
+    color:#ddd6fe;
+    font-size:13px;
+    ">
+        ${mtbeQuestionsSSV.length + metathesisQuestionsSSV.length + safetyQuestions.length} Questions
+    </div>
+
+</div>
+
+                              <!-- MERGE ROLES END POSITION CARDS CONTAINER -->
+
+</div>
+
+</div>
+
+`;
+}
+
+
+function setMergeRole(role) {
+    currentRole = role;
+    showMergeMenu();
+}
+
+function showMergeMenu() {
+
+    document.getElementById("content").innerHTML = `
+
+<div class="content-box">
+
+                              <!-- MERGE MENU NAVIGATION BUTTONS -->
+
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+<button onclick="showMergeRoles()">
+    ↩️ Merge Dashboard
+</button>
+
+                              <!-- MERGE MENU PAGE TITLE -->
+
+<h2 style="
+text-align:center;
+margin-top:25px;
+margin-bottom:10px;
+font-size:32px;
+font-weight:700;
+letter-spacing:1px;
+">
+    🎯 MERGE ${currentRole}
+</h2>
+
+
+                              <!-- MERGE MENU PAGE DESCRIPTION -->
+
+<p style="
+text-align:center;
+color:#ddd6fe;
+margin-bottom:5px;
+font-size:14px;
+letter-spacing:0.5px;
+">
+    MTBE + METATHESIS + SAFETY
+</p>
+
+
+
+                              <!-- MERGE MENU TRAINING CARDS CONTAINER -->
+
+<div class="training-menu">
+
+                              <!-- MERGE MENU QUESTION BANK CARD -->
+
+    <div
+        class="training-card"
+        onclick="showMergeQuestionBank()"
+        style="background:#5b21b6;"
+    >
+        <div class="training-icon">📚</div>
+
+        <div class="training-title">
+            Question Bank
+        </div>
+
+        <div class="training-description">
+            Study & Review Questions
+        </div>
+
+    </div>
+
+
+                              <!-- MERGE MENU FULL EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startMergeExam()"
+    style="background:#5b21b6;"
+>
+    <div class="training-icon">📝</div>
+
+    <div class="training-title">
+        ${currentRole} Full Exam
+    </div>
+
+    <div class="training-description">
+        Complete Assessment
+    </div>
+
+</div>
+
+                              <!-- MERGE MENU RANDOM EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startRandomMergeExam()"
+    style="background:#5b21b6;"
+>
+    <div class="training-icon">🎲</div>
+
+    <div class="training-title">
+        ${currentRole} Random Exam
+    </div>
+
+    <div class="training-description">
+        Quick Practice
+    </div>
+
+</div>
+
+                              <!-- MERGE MENU END TRAINING CARDS CONTAINER -->
+
+</div>
+
+</div>
+
+`;
+}
+
+
+                              /* ================QUESTION DATA SOURCES======= */
+
+
+
+                              /* ========= MTBE QUESTION SOURCE ======== */
+
+
+function getMTBEQuestions() {
+
+    if (currentRole === "CO") {
+        return mtbeQuestionsCO;
+    }
+
+    if (currentRole === "FO") {
+        return mtbeQuestionsFO;
+    }
+
+    if (currentRole === "SSV") {
+        return mtbeQuestionsSSV;
+    }
+
+    return [];
+}
+
+
+                              /* ================= METATHESIS QUESTION SOURCE ================= */
+
+function getMetathesisQuestions() {
+
+    if (currentRole === "CO") {
+        return metathesisQuestionsCO;
+    }
+
+    if (currentRole === "FO") {
+        return metathesisQuestionsFO;
+    }
+
+    if (currentRole === "SSV") {
+        return metathesisQuestionsSSV;
+    }
+
+    return [];
+}
+
+
+
+                              /* ================= MERGE QUESTION SOURCE ================= */
+
+function getMergeQuestions() {
+
+    if (currentRole === "FO") {
+        return [
+            ...mtbeQuestionsFO,
+            ...metathesisQuestionsFO,
+            ...safetyQuestions
+        ];
+    }
+
+    if (currentRole === "CO") {
+        return [
+            ...mtbeQuestionsCO,
+            ...metathesisQuestionsCO,
+            ...safetyQuestions
+        ];
+    }
+
+    if (currentRole === "SSV") {
+        return [
+            ...mtbeQuestionsSSV,
+            ...metathesisQuestionsSSV,
+            ...safetyQuestions
+        ];
+    }
+
+    return [];
+}
+
+
+                              /* ============================QUESTION BANK STATE MANAGEMENT==================== */
+
+
+
+                              /* ================= QUESTION BANK VARIABLES ================= */
+
+let collapsedSections = {};
+let currentPage = "";
+let currentRole = "";
+
+
+                              /* ================= QUESTION BANK SECTION TOGGLE ================= */
 
 function toggleSection(sectionName) {
 
@@ -668,58 +1572,75 @@ if (currentPage === "safety") {
 
 }
 
-                    // ======================
-                    // MTBE
-                    // ======================
-
+                                               // ======================
+                                              // MTBE QUESTION BANK PAGE
+                                             // ======================
 
 function showMTBE() {
 
-currentPage = "mtbe";
+    currentPage = "mtbe";
+
+    const mtbeQuestions = getMTBEQuestions();
 
     let html = `
 
     <div class="content-box">
 
-        <button onclick="showHome()">
-            🏠 Home
-        </button>
+                              <!-- MTBE QUESTION BANK NAVIGATION BUTTONS -->
 
-        <button onclick="showQuestionBank()">
-            ← Back
-        </button>
+    <button onclick="showHome()">
+        🏠 Main Dashboard
+    </button>
 
-        <br><br>
+    <button onclick="showMTBEMenu()">
+        ↩️ Back to Menu
+    </button>
 
-        <div style="
-        background:#1e3a8a;
-        padding:10px 20px;
-        border-radius:12px;
-        margin-top:8px;
-        margin-bottom:10px;
-        border-left:4px solid #93c5fd;
-        box-shadow:0 0 12px rgba(59,130,246,0.15);
-        ">
+    <br><br>
 
-            <h2 style="margin-bottom:5px;">
-                📘 MTBE Question Bank
-            </h2>
+                              <!-- MTBE QUESTION BANK PAGE HEADER -->
 
-            <p style="
-            margin:0;
-            padding-left:10px;
-            opacity:0.9;
-            ">
-                Total Questions: ${mtbeQuestions.length}
-            </p>
+    <div style="
+    background:#1e3a8a;
+    padding:10px 20px;
+    border-radius:12px;
+    margin-top:8px;
+    margin-bottom:10px;
+    border-left:4px solid #93c5fd;
+    box-shadow:0 0 12px rgba(59,130,246,0.15);
+    ">
+
+                              <!-- MTBE QUESTION BANK PAGE TITLE -->
+
+<h2 style="margin-bottom:5px;">
+📘 MTBE ${currentRole} Question Bank
+</h2>
+
+                              <!-- MTBE QUESTION BANK QUESTION COUNT -->
+
+<p style="
+margin:0;
+padding-left:10px;
+opacity:0.9;
+">
+    Total Questions: ${mtbeQuestions.length}
+</p>
 
 </div>
 
 `;
 
+
+                  /* ================= MTBE QUESTION BANK SECTION ORGANIZER ================= */
+
 let currentSection = "";
 
 const sections = {};
+
+
+
+            /* ================= MTBE QUESTION BANK GROUP QUESTIONS BY SECTION ================= */
+
 
 mtbeQuestions.forEach((q) => {
 
@@ -736,12 +1657,17 @@ mtbeQuestions.forEach((q) => {
 
 });
 
+
+                  /* ================= MTBE QUESTION BANK RENDER SECTIONS ================= */
+
 Object.keys(sections).forEach((sectionName) => {
 
     const isCollapsed =
         collapsedSections[sectionName] || false;
 
     html += `
+
+                                    <!-- MTBE QUESTION BANK SECTION HADER -->
 
 <div
 onclick="toggleSection('${sectionName}')"
@@ -751,10 +1677,12 @@ padding:12px 15px;
 margin-top:25px;
 border-radius:12px;
 border-left:5px solid #93c5fd;
-box-shadow:0 0 8px rgba(59,130,246,0.15);
+box-shadow:0 0 8px rgba(59,130,246,0.5);
 cursor:pointer;
 "
 >
+
+                                    <!-- MTBE QUESTION BANK SECTION TITLE -->
 
 <h3 style="
 margin:0;
@@ -768,13 +1696,19 @@ ${isCollapsed ? '▶' : '▼'}
 
 `;
 
-    if (isCollapsed) {
-        return;
-    }
+   
 
-    sections[sectionName].forEach((q, index) => {
+if (isCollapsed) {
+    return;
+}
 
-        html += `
+                  /* ================= MTBE QUESTION BANK RENDER QUESTION CARDS ================= */
+
+sections[sectionName].forEach((q, index) => {
+
+    html += `
+
+                                    <!-- MTBE QUESTION CARD -->
 
 <div style="
 background:#0f172a;
@@ -785,12 +1719,16 @@ border:1px solid #334155;
 box-shadow:0 0 8px rgba(59,130,246,0.08);
 ">
 
+                                    <!-- MTBE QUESTION TITLE -->
+
 <h3 style="
 color:#93c5fd;
 margin:0 0 3px 0;
 ">
 Question ${index + 1}
 </h3>
+
+                                    <!-- MTBE QUESTION SECTION NAME -->
 
 <p style="
 font-size:11px;
@@ -801,6 +1739,8 @@ margin:0 0 10px 0;
 ">
 ${sectionName}
 </p>
+
+                                    <!-- MTBE QUESTION TEXT -->
 
 <p style="
 font-size:18px;
@@ -816,67 +1756,80 @@ ${q.question}
 
 `;
 
-        q.options.forEach((option, i) => {
 
-            html += `
+const correct =
+q.correct !== undefined
+? q.correct
+: q.options.indexOf(q.answer);
 
-<p style="margin:8px 0;">
+                          /* ================= MTBE ANSWER OPTIONS ================= */
 
-${String.fromCharCode(65 + i)}.
-${option}
-
-${i === q.correct ? ' ✅' : ''}
-
-</p>
-
-`;
-
-        });
-
-        html += `
-
-</div>
-
-`;
-
-
-
-    });
-
-});
-
+q.options.forEach((option, i) => {
 
     html += `
 
-    </div>
+    <p style="margin:8px 0;">
+        ${String.fromCharCode(65 + i)}.
+        ${option}
+
+                                    <!-- MTBE CORRECT ANSWER MARKER -->
+
+        ${(
+            (q.answer !== undefined && option === q.answer) ||
+            (q.correct !== undefined && i === q.correct)
+        ) ? ' ✅' : ''}
+
+    </p>
 
     `;
+});
 
-    document.getElementById("content").innerHTML = html;
+html += `
+</div>
+`;
+
+});
+
+});
+
+                         /* ================= MTBE QUESTION BANK END PAGE ================= */
+
+html += `
+</div>
+`;
+
+document.getElementById("content").innerHTML = html;
+
 }
 
 
-                    // ======================
-                    // METATHESIS
-                    // ======================
+                                           // ======================
+                                          // METATHESIS
+                                         // ======================
 
 function showMeta() {
 
-currentPage = "meta";
+    currentPage = "meta";
+
+    const metathesisQuestions = getMetathesisQuestions();
 
     let html = `
 
-    <div class="content-box">
+<div class="content-box">
 
-        <button onclick="showHome()">
-            🏠 Home
-        </button>
+                                    <!-- METATHESIS QUESTION BANK NAVIGATION BUTTONS -->
 
-        <button onclick="showQuestionBank()">
-            ← Back
-        </button>
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
 
-        <br><br>
+<button onclick="showMetathesisMenu()">
+    ↩️ Back to Menu
+</button>
+
+<br><br>
+
+                                    <!-- METATHESIS QUESTION BANK PAGE HEADER -->
 
 <div style="
 background:#166534;
@@ -888,11 +1841,15 @@ border-left:4px solid #86efac;
 box-shadow:0 0 12px rgba(34,197,94,0.15);
 ">
 
+                                    <!-- METATHESIS QUESTION BANK PAGE TITLE -->
+
 <h2 style="
 margin-bottom:5px;
 ">
-📗 Metathesis Question Bank
+📗 METATHESIS ${currentRole} Question Bank
 </h2>
+
+                                    <!-- METATHESIS QUESTION BANK QUESTION COUNT -->
 
 <p style="
 margin:0;
@@ -904,11 +1861,23 @@ opacity:0.9;
 
 </div>
 
-    `;
+`;
+
+
+
+                                        // ======================
+                                       // METATHESIS QUESTION BANK SECTION ORGANIZER
+                                      // ======================
 
 let currentSection = "";
 
 const sections = {};
+
+
+
+                                         // ======================
+                                        // METATHESIS QUESTION BANK GROUP QUESTIONS BY SECTION
+                                       // ======================
 
 metathesisQuestions.forEach((q) => {
 
@@ -925,12 +1894,29 @@ metathesisQuestions.forEach((q) => {
 
 });
 
+
+
+                                         // ======================
+                                        // METATHESIS QUESTION BANK RENDER SECTIONS
+                                       // ======================
+
+
 Object.keys(sections).forEach((sectionName) => {
 
     const isCollapsed =
         collapsedSections[sectionName] || false;
 
     html += `
+
+
+                          <!-- METATHESIS QUESTION BANK SECTION HADER -->
+
+
+
+
+
+
+
 
 <div
 onclick="toggleSection('${sectionName}')"
@@ -944,25 +1930,39 @@ box-shadow:0 0 8px rgba(34,197,94,0.15);
 cursor:pointer;
 ">
 
+
+
+
+
+
+
+                                    <!-- METATHESIS QUESTION BANK SECTION TITLE -->
+
+
 <h3 style="
 margin:0;
 color:white;
 ">
-${isCollapsed ? '▶' : '▼'}
-📂 ${sectionName}
+TEST
 </h3>
 
 </div>
 
 `;
 
-    if (isCollapsed) {
-        return;
-    }
+if (isCollapsed) {
+    return;
+}
 
-    sections[sectionName].forEach((q, index) => {
+                                      // ======================
+                                     // METATHESIS QUESTION BANK RENDER QUESTION CARDS
+                                    // ======================
 
-        html += `
+sections[sectionName].forEach((q, index) => {
+
+    html += `
+
+                                    <!-- METATHESIS QUESTION CARD -->
 
 <div style="
 background:#0f172a;
@@ -972,12 +1972,16 @@ border-radius:12px;
 border:1px solid #334155;
 ">
 
+                                    <!-- METATHESIS QUESTION TITLE -->
+
 <h3 style="
 color:#86efac;
 margin:0 0 5px 0;
 ">
 Question ${index + 1}
 </h3>
+
+                                    <!-- METATHESIS QUESTION SECTION NAME -->
 
 <p style="
 font-size:11px;
@@ -988,6 +1992,8 @@ margin:0 0 10px 0;
 ">
 ${sectionName}
 </p>
+
+                                    <!-- METATHESIS QUESTION TEXT -->
 
 <p style="
 font-size:18px;
@@ -1014,8 +2020,10 @@ margin:8px 0;
 ${String.fromCharCode(65 + i)}.
 ${option}
 
-${i === q.correct ? ' ✅' : ''}
-
+${(
+    (q.answer !== undefined && option === q.answer) ||
+    (q.correct !== undefined && i === q.correct)
+) ? ' ✅' : ''}
 </p>
 
 `;
@@ -1052,28 +2060,142 @@ document.getElementById("content").innerHTML = html;
 
 
 
-                    // ======================
-                    // SAFETY
-                    // ======================
+                                      // ======================
+                                     // SAFETY MENU
+                                    // ======================
 
-function showSafety() {
+function showSafetyMenu() {
 
 
-    currentPage = "safety";
-
-      let html = `
+    document.getElementById("content").innerHTML = `
 
     <div class="content-box">
 
+        <!-- BACK TO MAIN DASHBOARD BUTTON -->
         <button onclick="showHome()">
-            🏠 Home
+            🏠 Main Dashboard
         </button>
 
-        <button onclick="showQuestionBank()">
-            ← Back
+                                    <!-- SAFETY PAGE TITLE -->
+        <h2 style="
+        text-align:center;
+        margin-top:25px;
+        margin-bottom:5px;
+        font-size:32px;
+        font-weight:700;
+        letter-spacing:1px;
+        ">
+        🦺 SAFETY
+        </h2>
+
+                                    <!-- SAFETY QUESTIONS COUNT -->
+        <p style="
+        text-align:center;
+        color:#fecaca;
+        margin-bottom:30px;
+        font-size:14px;
+        letter-spacing:0.5px;
+        ">
+        ${safetyQuestions.length} Questions
+        </p>
+
+
+        <div class="training-menu">
+
+                                    <!-- SAFETY QUESTION BANK CARD -->
+<div
+    class="training-card"
+    onclick="showSafety()"
+    style="background:#dc2626;"
+>
+
+                <div class="training-icon">📚</div>
+
+                <div class="training-title">
+                    Question Bank
+                </div>
+
+                <div class="training-description">
+                    Study & Review Questions
+                </div>
+            </div>
+
+
+                                    
+                                    <!-- SAFETY FULL EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startSafety()"
+    style="background:#dc2626;"
+>
+                <div class="training-icon">📝</div>
+
+                <div class="training-title">
+                    Full Exam
+                </div>
+
+                <div class="training-description">
+                    Complete Assessment
+                </div>
+            </div>
+
+
+
+                                    <!-- SAFETY RANDOM EXAM CARD -->
+
+<div
+    class="training-card"
+    onclick="startRandomSAFETYExam()"
+    style="background:#dc2626;"
+>
+
+                <div class="training-icon">🎲</div>
+
+                <div class="training-title">
+                    Random Exam
+                </div>
+
+                <div class="training-description">
+                    Quick Practice
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
+}
+
+
+                                      // ======================
+                                     // SAFETY
+                                    // ======================
+
+
+
+function showSafety() {
+
+    currentPage = "safety";
+
+    let html = `
+
+    <div class="content-box">
+
+                                    <!-- SAFETY QUESTION BANK NAVIGATION BUTTONS -->
+
+        <button onclick="showHome()">
+            🏠 Main Dashboard
+        </button>
+
+        <button onclick="showSafetyMenu()">
+            ↩️ Back to Safety Menu
         </button>
 
         <br><br>
+
+                                    <!-- SAFETY QUESTION BANK PAGE HEADER -->
 
         <div style="
         background:#dc2626;
@@ -1085,9 +2207,13 @@ function showSafety() {
         box-shadow:0 0 12px rgba(239,68,68,0.15);
         ">
 
+                                    <!-- SAFETY QUESTION BANK PAGE TITLE -->
+
             <h2 style="margin-bottom:5px;">
                 🦺 Safety Question Bank
             </h2>
+
+                                    <!-- SAFETY QUESTION BANK QUESTION COUNT -->
 
             <p style="
             margin:0;
@@ -1101,9 +2227,16 @@ function showSafety() {
 
     `;
 
-    safetyQuestions.forEach((q, index) => {
 
-        html += `
+                                      // ======================
+                                     // SAFETY QUESTION BANK RENDER QUESTION CARDS
+                                    // ======================
+
+safetyQuestions.forEach((q, index) => {
+
+    html += `
+
+        <!-- SAFETY QUESTION CARD -->
 
         <div style="
         background:#0f172a;
@@ -1113,12 +2246,16 @@ function showSafety() {
         border:1px solid #334155;
         ">
 
+                                    <!-- SAFETY QUESTION TITLE -->
+
         <h3 style="
         color:#fecaca;
         margin:0 0 5px 0;
         ">
         Question ${index + 1}
         </h3>
+
+                                    <!-- SAFETY QUESTION TEXT -->
 
         <p style="
         font-size:18px;
@@ -1132,28 +2269,24 @@ function showSafety() {
         ${q.question}
         </p>
 
-        `;
+    `;
 
-        q.options.forEach((option, i) => {
+    q.options.forEach((option, i) => {
 
-            html += `
+        html += `
+
+                                    <!-- SAFETY ANSWER OPTIONS -->
 
             <p style="margin:8px 0;">
 
             ${String.fromCharCode(65 + i)}.
             ${option}
 
+                                    <!-- SAFETY CORRECT ANSWER MARKER -->
+
             ${i === q.correct ? ' ✅' : ''}
 
             </p>
-
-            `;
-
-        });
-
-        html += `
-
-        </div>
 
         `;
 
@@ -1161,68 +2294,109 @@ function showSafety() {
 
     html += `
 
-    </div>
+        </div>
 
     `;
 
-    document.getElementById("content").innerHTML = html;
+});
+
+html += `
+
+    </div>
+
+`;
+
+document.getElementById("content").innerHTML = html;
 }
 
 
 
-function showCombinedQuestionBank() {
+                                    // ======================
+                                    // MERGE QUESTION BANK
+                                    // ======================
 
-    currentPage = "combined";
+function showMergeQuestionBank() {
 
-    const combinedQuestions = [
-        ...mtbeQuestions,
-        ...metathesisQuestions,
-        ...safetyQuestions
-    ];
+    currentPage = "Merge";
+
+    const MergeQuestions = getMergeQuestions();
 
     let html = `
 
     <div class="content-box">
 
+                                    <!-- MERGE QUESTION BANK NAVIGATION BUTTONS -->
+
         <button onclick="showHome()">
-            🏠 Home
+            🏠 Main Dashboard
         </button>
 
-        <button onclick="showQuestionBank()">
-            ← Back
+        <button onclick="showMergeMenu()">
+            ↩️ Back to Menu
         </button>
 
         <br><br>
 
+                                    <!-- MERGE QUESTION BANK PAGE HEADER -->
+
         <div style="
-        background:#5b21b6;
-        padding:10px 20px;
+        background:#1e293b;
+        padding:15px 20px;
         border-radius:12px;
         margin-top:8px;
-        margin-bottom:10px;
-        border-left:4px solid #ddd6fe;
-        box-shadow:0 0 12px rgba(168,85,247,0.15);
+        margin-bottom:15px;
+        border-left:4px solid #a855f7;
+        max-width:760px;
         ">
 
-            <h2 style="margin-bottom:5px;">
-                🎯 Combined Question Bank
+                                    <!-- MERGE QUESTION BANK PAGE TITLE -->
+
+            <h2 style="
+            margin-bottom:5px;
+            ">
+            Merge ${currentRole} 📚
             </h2>
+
+                                    <!-- MERGE QUESTION BANK DESCRIPTION -->
 
             <p style="
             margin:0;
-            padding-left:12px;
-            opacity:0.9;
+            opacity:0.85;
+            letter-spacing:0.5px;
+            font-size:14px;
+            color:#ddd6fe;
             ">
-                Total Questions: ${combinedQuestions.length}
+            MTBE + META + SAFETY
             </p>
+
+                                    <!-- MERGE QUESTION BANK QUESTION COUNT -->
+
+            <p style="
+            margin:4px 0 0 0;
+            font-size:15px;
+            font-weight:bold;
+            ">
+            Question Bank • ${MergeQuestions.length} Questions
+            </p>
+
 
         </div>
 
     `;
 
-    combinedQuestions.forEach((q, index) => {
+
+
+                                     // ======================
+                                    // MERGE QUESTION BANK RENDER QUESTION CARDS
+                                   // ======================
+
+MergeQuestions.forEach((q, index) => {
+
     if (!q) return;
-        html += `
+
+    html += `
+
+                                    <!-- MERGE QUESTION CARD -->
 
         <div style="
         background:#0f172a;
@@ -1232,12 +2406,16 @@ function showCombinedQuestionBank() {
         border:1px solid #334155;
         ">
 
+                                    <!-- MERGE QUESTION TITLE -->
+
         <h3 style="
         color:#ddd6fe;
         margin:0 0 5px 0;
         ">
         Question ${index + 1}
         </h3>
+
+                                    <!-- MERGE QUESTION TEXT -->
 
         <p style="
         font-size:18px;
@@ -1251,28 +2429,27 @@ function showCombinedQuestionBank() {
         ${q.question}
         </p>
 
-        `;
+    `;
 
-        q.options.forEach((option, i) => {
+    q.options.forEach((option, i) => {
 
-            html += `
+        html += `
+
+                                    <!-- MERGE ANSWER OPTIONS -->
 
             <p style="margin:8px 0;">
 
             ${String.fromCharCode(65 + i)}.
             ${option}
 
-            ${i === q.correct ? ' ✅' : ''}
+                                    <!-- MERGE CORRECT ANSWER MARKER -->
+
+            ${(
+                (q.answer !== undefined && option === q.answer) ||
+                (q.correct !== undefined && i === q.correct)
+            ) ? ' ✅' : ''}
 
             </p>
-
-            `;
-
-        });
-
-        html += `
-
-        </div>
 
         `;
 
@@ -1280,17 +2457,29 @@ function showCombinedQuestionBank() {
 
     html += `
 
-    </div>
+        </div>
 
     `;
 
-    document.getElementById("content").innerHTML = html;
+});
+
+html += `
+
+    </div>
+
+`;
+
+document.getElementById("content").innerHTML = html;
+
 }
 
-                    // ======================
-                    // EXAMS
-                    // ======================
 
+
+                                             // ======================
+                                            // EXAMS
+                                           // ======================
+
+                                    // EXAM STATE MANAGEMENT
 
 let currentQuestions = [];
 let currentQuestion = 0;
@@ -1298,11 +2487,15 @@ let score = 0;
 let examTitle = "";
 
 
+                                            // ======================
+                                           // MTBE FULL EXAM INITIALIZER
+                                          // ======================
+
 function startMTBE() {
 
-    examTitle = "📘 MTBE Exam";
+    examTitle = `MTBE ${currentRole}`;
 
-    currentQuestions = mtbeQuestions;
+    currentQuestions = getMTBEQuestions();
 
     currentQuestion = 0;
 
@@ -1311,12 +2504,16 @@ function startMTBE() {
     showQuestion();
 }
 
+
+                                         // ======================
+                                        // METATHESIS FULL EXAM INITIALIZER
+                                       // ======================
 
 function startMetathesis() {
 
-    examTitle = "📗 Metathesis Exam";
+    examTitle = `METATHESIS ${currentRole}`;
 
-    currentQuestions = metathesisQuestions;
+    currentQuestions = getMetathesisQuestions();
 
     currentQuestion = 0;
 
@@ -1325,9 +2522,14 @@ function startMetathesis() {
     showQuestion();
 }
 
+
+                                      // ======================
+                                     // SAFETY FULL EXAM INITIALIZER
+                                    // ======================
+
 function startSafety() {
 
-    examTitle = "🦺 Safety Exam";
+    examTitle = "Safety";
 
     currentQuestions = safetyQuestions;
 
@@ -1339,17 +2541,15 @@ function startSafety() {
 }
 
 
-function startCombinedExam() {
+                                      // ======================
+                                     // MERGE FULL EXAM INITIALIZER
+                                    // ======================
 
-    examTitle = "🎯 Combined Exam";
+function startMergeExam() {
 
-    const allQuestions = [
-        ...mtbeQuestions,
-        ...metathesisQuestions,
-        ...safetyQuestions
-    ];
+    examTitle = `Merge ${currentRole}`;
 
-    currentQuestions = [...allQuestions];
+    currentQuestions = getMergeQuestions();
 
     currentQuestion = 0;
 
@@ -1359,35 +2559,36 @@ function startCombinedExam() {
 }
 
 
+                                      // ======================
+                                     // MERGE RANDOM EXAM INITIALIZER
+                                    // ======================
 
-function startRandomCombinedExam() {
+function startRandomMergeExam() {
 
-    examTitle = "🎲 Random Combined Exam";
+    examTitle = `Merge ${currentRole}`;
 
-    const allQuestions = [
-        ...mtbeQuestions,
-        ...metathesisQuestions,
-        ...safetyQuestions
-    ];
-
-    currentQuestions = [...allQuestions]
+    currentQuestions = [...getMergeQuestions()]
         .sort(() => Math.random() - 0.5)
         .slice(0, 40);
 
     currentQuestion = 0;
+
     score = 0;
 
     showQuestion();
 }
 
 
+                                      // ======================
+                                     // MTBE RANDOM EXAM INITIALIZER
+                                    // ======================
 
 function startRandomMTBEExam() {
 
-    examTitle = "🎲 Random MTBE Exam";
+    examTitle = `MTBE ${currentRole}`;
 
     const allQuestions = [
-        ...mtbeQuestions,
+        ...getMTBEQuestions(),
     ];
 
     currentQuestions = [...allQuestions]
@@ -1401,13 +2602,17 @@ function startRandomMTBEExam() {
     showQuestion();
 }
 
+
+                                      // ======================
+                                     // METATHESIS RANDOM EXAM INITIALIZER
+                                    // ======================
 
 function startRandomMETATHESISExam() {
 
-    examTitle = "🎲 Random Metathesis Exam";
+    examTitle = `METATHESIS ${currentRole}`;
 
     const allQuestions = [
-        ...metathesisQuestions,
+        ...getMetathesisQuestions(),
     ];
 
     currentQuestions = [...allQuestions]
@@ -1422,9 +2627,13 @@ function startRandomMETATHESISExam() {
 }
 
 
+                                      // ======================
+                                     // SAFETY RANDOM EXAM INITIALIZER
+                                    // ======================
+
 function startRandomSAFETYExam() {
 
-    examTitle = "🎲 Random Safety Exam";
+    examTitle = "Safety";
 
     const allQuestions = [
         ...safetyQuestions,
@@ -1444,95 +2653,158 @@ function startRandomSAFETYExam() {
 
 
 
-                    // ======================
-                    // QUESTION ENGINE
-                    // ======================
 
 
+                                      // ======================
+                                     // QUESTION ENGINE
+                                    // ======================
 
 function showQuestion() {
 
+    // CURRENT QUESTION DATA
+
     const q = currentQuestions[currentQuestion];
 
-let examColor = "#f5a623";
+                                    
+                                    // EXAM COLOR THEME
 
-if (examTitle.includes("MTBE")) {
-    examColor = "#3b82f6";
-}
+    let examColor = "#f5a623";
 
-if (examTitle.includes("Metathesis")) {
-    examColor = "#22c55e";
-}
+    if (examTitle.includes("MTBE")) {
+        examColor = "#3b82f6";
+    }
 
-if (examTitle.includes("Safety")) {
-    examColor = "#ef4444";
-}
+    if (examTitle.includes("METATHESIS")) {
+        examColor = "#22c55e";
+    }
 
-if (examTitle.includes("Combined")) {
-    examColor = "#a855f7";
-}
+    if (examTitle.includes("Safety")) {
+        examColor = "#ef4444";
+    }
 
-let buttonColor = examColor;
+    if (examTitle.includes("Merge")) {
+        examColor = "#a855f7";
+    }
 
-let html = `
+    let buttonColor = examColor;
 
-<div class="content-box">
+    let html = `
 
-<button onclick="showHome()">
-🏠 Dashboard
-</button>
+    <div class="content-box">
 
-<br><br>
+                                    <!-- QUESTION ENGINE NAVIGATION BUTTONS -->
+
+        <button onclick="showHome()">
+        🏠 Main Dashboard
+        </button>
+
+        <button onclick="
+        if (examTitle.includes('MTBE')) {
+            showMTBEMenu();
+        }
+        else if (examTitle.includes('METATHESIS')) {
+            showMetathesisMenu();
+        }
+        else if (examTitle.includes('Merge')) {
+            showMergeMenu();
+        }
+        else if (examTitle.includes('Safety')) {
+            showSafetyMenu();
+        }
+        ">
+        ↩️ Back to Menu
+        </button>
+
+        <br><br>
+
+                                    <!-- QUESTION ENGINE EXAM HEADER -->
 
 <div style="
 background:#1e293b;
-padding:12px 20px;
+padding:15px 20px;
 border-radius:12px;
+margin-top:8px;
 margin-bottom:15px;
 border-left:4px solid ${examColor};
+max-width:760px;
 ">
 
-        <div style="
-        background:#1e293b;
-        padding:12px 20px;
-        border-radius:12px;
-        margin-bottom:15px;
-        border-left:4px solid ${examColor};
-        ">
+                                    <!-- QUESTION ENGINE EXAM TITLE -->
 
-            <h2 style="margin-bottom:5px;">
-                ${examTitle}
-            </h2>
+    <h2 style="
+    margin-bottom:5px;
+    ">
+    ${examTitle
+        .replace(' Full Exam', '')
+        .replace(' Random Exam', '')
+    }
+    </h2>
 
-            <p style="margin:0;">
-                Question ${currentQuestion + 1}
-                of
-                ${currentQuestions.length}
-            </p>
+                                    <!-- MERGE EXAM DESCRIPTION -->
 
-        </div>
+    ${examTitle.includes('Merge') ? `
+    <p style="
+    margin:0;
+    opacity:0.85;
+    letter-spacing:0.5px;
+    font-size:14px;
+    color:#ddd6fe;
+    ">
+    MTBE + META + SAFETY
+    </p>
+    ` : ''}
 
-        <div style="
-        background:rgba(255,255,255,0.03);
-        padding:12px;
-        border-radius:10px;
-        border-left:3px solid ${examColor};
-        margin-bottom:15px;
-        ">
+                                    <!-- QUESTION ENGINE EXAM TYPE AND QUESTION COUNT -->
 
-            <h3 style="
-            margin:0;
-            ">
-                ${q.question}
-            </h3>
+    <p style="
+    margin:4px 0 0 0;
+    font-size:15px;
+    font-weight:bold;
+    ">
+    ${examTitle.includes('Random')
+    ? `Random Exam • ${currentQuestions.length} Questions`
+    : `Full Exam • ${currentQuestions.length} Questions`}
+    </p>
 
-        </div>
+                                    <!-- QUESTION ENGINE WARNING CONTAINER -->
 
-    `;
+    <div id="warningBox" style="
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    "></div>
 
-    q.options.forEach((option, i) => {
+</div>
 
-        html += `
+
+
+                                    <!-- QUESTION ENGINE QUESTION CARD -->
+
+<div style="
+background:rgba(255,255,255,0.03);
+padding:12px;
+border-radius:10px;
+border-left:3px solid ${examColor};
+margin-bottom:15px;
+">
+
+                                    <!-- QUESTION ENGINE QUESTION TEXT -->
+
+    <h3 style="
+    margin:0;
+    ">
+        ${q.question}
+    </h3>
+
+</div>
+
+`;
+    
+q.options.forEach((option, i) => {
+
+    html += `
+
+                                    <!-- QUESTION ENGINE ANSWER OPTION -->
 
         <p style="
         margin:12px 0;
@@ -1547,54 +2819,97 @@ border-left:4px solid ${examColor};
 
         </p>
 
-        `;
-
-    });
-
-    html += `
-
-
-<button
-id="submitBtn"
-onclick="checkAnswer()"
-style="
-background:${buttonColor};
-min-width:140px;
-height:45px;
-font-weight:bold;
-">
-✅ Submit Answer
-</button>
-
-<button
-id="nextBtn"
-onclick="nextQuestion()"
-disabled
-style="
-background:${buttonColor};
-min-width:140px;
-height:45px;
-font-weight:bold;
-">
-➡️ Next Question
-</button>
-
-
-        <div id="result"></div>
-
-    </div>
-
     `;
 
-    document.getElementById("content").innerHTML = html;
+});
+
+html += `
+
+                                    <!-- QUESTION ENGINE ACTION BUTTONS -->
+
+    <button
+    id="submitBtn"
+    onclick="checkAnswer()"
+    style="
+    background:${buttonColor};
+    min-width:140px;
+    height:45px;
+    font-weight:bold;
+    ">
+    ✅ Submit Answer
+    </button>
+
+    <button
+    id="nextBtn"
+    onclick="nextQuestion()"
+    style="
+    background:${buttonColor};
+    min-width:140px;
+    height:45px;
+    font-weight:bold;
+    ">
+    ➡️ Next Question
+    </button>
+
+                                    <!-- QUESTION ENGINE RESULT CONTAINER -->
+
+    <div id="result"></div>
+
+</div>
+
+`;
+
+document.getElementById("content").innerHTML = html;
+
 }
 
 
+                                      // ======================
+                                     // ANSWER PROCESSING
+                                    // ======================
 
-                    // ======================
-                    // ANSWER PROCESSIN
-                    // ======================
+function showWarning(message) {
 
+    const warningBox =
+    document.getElementById("warningBox");
+
+    if (!warningBox) return;
+
+    warningBox.innerHTML = `
+
+                                    <!-- ANSWER PROCESSING WARNING MESSAGE -->
+
+        <div style="
+        background:rgba(245,158,11,0.75);
+        color:#ffffff;
+        padding:8px 14px;
+        border-radius:12px;
+        font-weight:bold;
+        font-size:15px;
+        border:1px solid #fcd34d;
+        text-align:center;
+        display:inline-block;
+        margin-left:auto;
+        margin-right:40px;
+        box-shadow:0 0 12px rgba(0,0,0,0.25);
+        ">
+            ${message}
+        </div>
+
+    `;
+
+    setTimeout(() => {
+
+        warningBox.innerHTML = "";
+
+    }, 2500);
+
+}
+
+
+                                      // ======================
+                                     // ANSWER VALIDATION
+                                    // ======================
 
 function checkAnswer() {
 
@@ -1605,7 +2920,9 @@ function checkAnswer() {
 
     if (!selected) {
 
-        alert("Select an answer");
+        showWarning(
+            "Please select an answer first ⚠️"
+        );
 
         return;
     }
@@ -1613,8 +2930,15 @@ function checkAnswer() {
     const chosen =
     Number(selected.value);
 
+    const q = currentQuestions[currentQuestion];
+
     const correct =
-    currentQuestions[currentQuestion].correct;
+    q.correct !== undefined
+    ? q.correct
+    : q.options.indexOf(q.answer);
+
+                                    
+                                    // CORRECT ANSWER HANDLER
 
     if (chosen === correct) {
 
@@ -1622,50 +2946,137 @@ function checkAnswer() {
 
         document.getElementById("result").innerHTML = `
 
-        <p style="color:green;font-weight:bold;font-size:18px;">
-            ✅ Correct
-        </p>
+                                    <!-- CORRECT ANSWER MESSAGE -->
+
+        <div style="
+        margin-top:15px;
+        padding:12px;
+        border-radius:10px;
+        background:rgba(34,197,94,0.15);
+        border-left:4px solid #22c55e;
+        ">
+
+            <p style="
+            color:#22c55e;
+            font-weight:bold;
+            font-size:20px;
+            margin:0;
+            ">
+                ✅ Correct Answer
+            </p>
+
+        </div>
 
         `;
 
+
+
+                                    // INCORRECT ANSWER HANDLER
+
     } else {
 
+        document.getElementById("result").innerHTML = `
 
-     document.getElementById("result").innerHTML = `
+                                    <!-- INCORRECT ANSWER MESSAGE -->
 
-     <p style="color:red;font-weight:bold;font-size:18px;">
-       ❌ Incorrect
-       </p>
+        <div style="
+        margin-top:15px;
+        padding:12px;
+        border-radius:10px;
+        background:rgba(239,68,68,0.15);
+        border-left:4px solid #ef4444;
+        ">
 
-     <p style="color:green;font-weight:bold;font-size:18px;">
-        ✅ Correct Answer:
-       ${currentQuestions[currentQuestion].options[correct]}
-      </p>
+            <p style="
+            color:#ef4444;
+            font-weight:bold;
+            font-size:20px;
+            margin:0;
+            ">
+                ❌ Incorrect Answer
+            </p>
 
+        </div>
+
+                                    <!-- CORRECT ANSWER DISPLAY -->
+
+        <div style="
+        margin-top:10px;
+        padding:12px;
+        border-radius:10px;
+        background:rgba(34,197,94,0.15);
+        border-left:4px solid #22c55e;
+        ">
+
+            <p style="
+            color:#22c55e;
+            font-weight:bold;
+            font-size:18px;
+            margin:0;
+            ">
+                ✅ Correct Answer:
+                ${currentQuestions[currentQuestion].options[correct]}
+            </p>
+
+        </div>
 
         `;
 
     }
 
+
+
+                                    // DISABLE ANSWER OPTIONS
+
     document
     .querySelectorAll('input[name="answer"]')
     .forEach(r => r.disabled = true);
 
+ 
+                                    // DISABLE SUBMIT BUTTON
+
     document.getElementById("submitBtn").disabled = true;
 
+
+                                    // ENABLE NEXT QUESTION BUTTON
+
     document.getElementById("nextBtn").disabled = false;
+
 }
 
 
-                    // ======================
-                    // NAVIGATION
-                    // ======================
-
-
+                                      // ======================
+                                     // NAVIGATION
+                                    // ======================
 
 function nextQuestion() {
 
+    const selected =
+    document.querySelector(
+        'input[name="answer"]:checked'
+    );
+
+   
+                                     // VALIDATE ANSWER SUBMISSION
+
+    if (!selected) {
+
+        showWarning(
+            "Please submit your answer first ⚠️"
+        );
+
+        return;
+    }
+
+
+
+                                    // MOVE TO NEXT QUESTION
+
     currentQuestion++;
+
+
+
+                                    // CHECK EXAM COMPLETION
 
     if (currentQuestion >= currentQuestions.length) {
 
@@ -1674,21 +3085,40 @@ function nextQuestion() {
         return;
     }
 
+    
+
+                                    // RENDER NEXT QUESTION
+
     showQuestion();
 }
 
+
+                                      // ======================
+                                     // EXAM RESULTS
+                                    // ======================
+
 function finishExam() {
+
+
+
+                                    // CALCULATE EXAM SCORE
 
     const percent =
     Math.round(
         (score / currentQuestions.length) * 100
     );
 
+    
+
+                                    // DETERMINE PASS OR FAIL STATUS
+
     const passed = percent >= 80;
 
     document.getElementById("content").innerHTML = `
 
     <div class="content-box">
+
+                                    <!-- EXAM RESULTS HEADER -->
 
         <div style="
         background:${passed ? '#166534' : '#991b1b'};
@@ -1698,15 +3128,33 @@ function finishExam() {
         border-left:4px solid ${passed ? '#86efac' : '#fca5a5'};
         ">
 
+                                    <!-- EXAM COMPLETION TITLE -->
+
             <h2 style="margin:0 0 8px 0;">
                 🎉 Exam Completed
             </h2>
+
+           
+
+                                    <!-- EXAM TITLE -->
+
+            <p style="
+            margin:0 0 10px 0;
+            font-size:18px;
+            font-weight:bold;
+            ">
+                ${examTitle}
+            </p>
+
+                                    <!-- EXAM STATUS -->
 
             <p style="margin:0;">
                 ${passed ? '✅ PASS' : '❌ FAIL'}
             </p>
 
         </div>
+
+                                    <!-- RESULTS SUMMARY CARD -->
 
         <div style="
         background:#0f172a;
@@ -1715,17 +3163,25 @@ function finishExam() {
         border:1px solid #334155;
         ">
 
+                                    <!-- RESULTS SUMMARY TITLE -->
+
             <h3>📊 Results Summary</h3>
+
+                                    <!-- EXAM SCORE -->
 
             <p>
                 <strong>Score:</strong>
                 ${score} / ${currentQuestions.length}
             </p>
 
+                                    <!-- EXAM PERCENTAGE -->
+
             <p>
                 <strong>Percentage:</strong>
                 ${percent}%
             </p>
+
+                                    <!-- EXAM PERFORMANCE MESSAGE -->
 
             <p style="
             font-size:20px;
@@ -1741,11 +3197,13 @@ function finishExam() {
 
         <br>
 
+                                    <!-- RESULTS PAGE ACTION BUTTONS -->
+
         <button onclick="showHome()">
-            🏠 Return Home
+            🏠 Main Dashboard
         </button>
 
-        <button onclick="restartExam()">
+        <button onclick="location.reload()">
             🔄 Retake Exam
         </button>
 
@@ -1754,202 +3212,6 @@ function finishExam() {
     `;
 }
 
-
-
-
-                    // ======================
-                    // LEARNING MODULES
-                    // ======================
-
-
-
-function showQuestionBank() {
-
-    document.getElementById("content").innerHTML = `
-
-    <div class="content-box">
-
-        <button onclick="showHome()">
-            🏠 Dashboard
-        </button>
-
-        <br><br>
-
-        <h2>📚 Learning Modules</h2>
-
-        <p>
-            Select a training module to study and review.
-        </p>
-
-        <hr>
-
-        <button onclick="showMTBE()">
-            📘 MTBE Module
-        </button>
-
-        <br><br>
-
-        <button onclick="showMeta()">
-            📗 Metathesis Module
-        </button>
-
-        <br><br>
-
-        <button onclick="showSafety()">
-            🦺 Safety Module
-        </button>
-
-    </div>
-
-    `;
-}
-
-
-
-
-                    // ======================
-                    // ASSESSMENT CENTER
-                    // ======================
-
-function showExams() {
-
-        document.getElementById("content").innerHTML = `
-
-        <div class="content-box">
-
-        <button onclick="showHome()">
-        🏠 Dashboard
-        </button>
-
-<br><br>
-
-
-<div style="
-        background:#1e293b;
-        padding:15px 20px;
-        border-radius:12px;
-        margin-bottom:20px;
-        border-left:4px solid #f5a623;
-        ">
-
-        <h2 style="margin-bottom:5px;">
-        📝 Assessment Center
-        </h2>
-
-        <p style="margin:0;">
-        Select an exam to start.
-        </p>
-</div>
-
-
-        <div style="
-        display:flex;
-        flex-wrap:wrap;
-        gap:20px;
-        margin-top:20px;
-        ">
-
-
-<div style="
-        background:#0d47a1;
-        padding:20px;
-        border-radius:12px;
-        min-width:150px;
-        text-align:center;
-        ">
-
-        <h2>📘</h2>
-        <h3>MTBE</h3>
-        <p>${mtbeQuestions.length} Questions</p>
-
-        <button onclick="startMTBE()">
-        Start Exam
-        </button>
-
-</div>
-
-
-<div style="
-        background:#2e7d32;
-        padding:20px;
-        border-radius:12px;
-        min-width:150px;
-        text-align:center;
-        ">
-
-        <h2>📗</h2>
-        <h3>Metathesis</h3>
-        <p>${metathesisQuestions.length} Questions</p>
-
-        <button onclick="startMetathesis()">
-        Start Exam
-        </button>
-</div>
-
-
-<div style="
-        background:#dc2626;
-        padding:20px;
-        border-radius:12px;
-        min-width:150px;
-        text-align:center;
-        ">
-
-        <h2>🦺</h2>
-        <h3>Safety</h3>
-        <p>${safetyQuestions.length} Questions</p>
-
-        <button onclick="startSafety()">
-        Start Exam
-        </button>
-</div>
-
-
-<div style="
-        background:#6a1b9a;
-        padding:20px;
-        border-radius:12px;
-        min-width:150px;
-        text-align:center;
-        ">
-
-        <h2>🎯</h2>
-        <h3>Combined</h3>
-        <p>${mtbeQuestions.length + metathesisQuestions.length} Questions</p>
-
-        <button onclick="startCombinedExam()">
-        Start Exam
-        </button>
-</div>
-
-
-<div style="
-        background:#ef6c00;
-        padding:20px;
-        border-radius:12px;
-        min-width:150px;
-        text-align:center;
-        ">
-
-        <h2>🎲</h2>
-        <h3>Random</h3>
-        <p>40 Questions</p>
-
-        <button onclick="startRandomCombinedExam()">
-        Start Exam
-        </button>
-</div>
-
-
-</div>
-
-
-</div>
-
-
-`;
-
-}
 
 console.log("SCRIPT LOADED");
 
