@@ -660,7 +660,596 @@ const safetyQuestions = [
         "Both 2 & 3"
     ],
     correct: 3
+},
+
+{
+
+    question: "How long fire watch stand after job completed?",
+
+    options: [
+        "15 minutes",
+        "20 minutes",
+        "30 minutes",
+        "Not require"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "When disaster siren test?",
+
+    options: [
+        "Weekly",
+        "Daily",
+        "By weekly",
+        "Monthly"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "Who is giving order to fire chief during emergency situation ?",
+
+    options: [
+        "Fire chief",
+        "PRSS",
+        "Incident commander /Post commander",
+        "Area supervisor"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "Who is responcible for evacuating during emergency ?",
+
+    options: [
+        "PRSS",
+        "Plant manager",
+        "Fire chief",
+        "Incident commander /Post commander"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "What is the Section head action when arrives to the affected area during an emergency?",
+
+    options: [
+        "Stay in his car",
+        "No any action",
+        "Take charge of emergency command post",
+        "Collect the contractors and give safety talk"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "Who must notify/Inform first by fire watch in case of fire?",
+
+    options: [
+        "Contractor receiver",
+        "Communication building",
+        "Control room and supervisor",
+        "Maintenance supervisor"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What is the duty of the flag man during an emergency disaster?",
+
+    options: [
+        "Safely direct the fire trucks and ambulance to the site of the emergency",
+        "Direct the contractors to the assembly area",
+        "Stand by near the incident commander",
+        "Stand by near the tank farm control room"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "Who can activate ECC?",
+
+    options: [
+        "Security commander",
+        "Fire commander",
+        "Incident commander",
+        "PRSS"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "Which document will provide information related to section response plan?",
+
+    options: [
+        "LERP",
+        "MERP",
+        "SERP",
+        "CERP"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "Who will be incident commander in a disaster after office hour?",
+
+    options: [
+        "SSV",
+        "Manager",
+        "Vice precident",
+        "PRSS"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "Who is authorised to enable MOS upto 24 hrs",
+
+    options: [
+        "Department Manager",
+        "Section Head or PRSS",
+        "SSV",
+        "Console"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Who is authorised to enable MOS more than 24 hrs. up to 3 days",
+
+    options: [
+        "Department Manager",
+        "Section Head or PRSS",
+        "SSV",
+        "Console"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "What is the frequency of eye wash checklist ?",
+
+    options: [
+        "Weekly one",
+        "Quaterly one",
+        "Monthly twice",
+        "Monthly one"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "Which area identified as high security area and need PPEs to enter in that area at Petrorabigh facility?",
+
+    options: [
+        "After gate no.1",
+        "Inside gate no.4 AND INSIDE GATE 5",
+        "Building no.108",
+        "Building no.200"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Who can take photo inside the petrorabigh facility ?",
+
+    options: [
+        "Section head",
+        "Inspection department",
+        "PR authorised personal only",
+        "Industrial security"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What is the frequency of disater siren check?",
+
+    options: [
+        "Every week once on Saturday 12 AM",
+        "Every week once on Saturday 12 PM",
+        "Every week once on Sunday 12 AM 12PM",
+        "Every week once on Sunday 12 PM Monday"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "ESD bypass device should be permanently authorized by ----",
+
+    options: [
+        "PRSS",
+        "Operation engineer",
+        "Section head",
+        "Shift supervisor"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Emergency shut dawn (ESD) to be Initiated By?",
+
+    options: [
+        "PRSS",
+        "Operation engineer",
+        "Section head",
+        "Shift supervisor"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "Emergency shut dawn (ESD) more than 72 Hrs approved by ?",
+
+    options: [
+        "Proponent Dept. Manager only",
+        "TSD Manager",
+        "ENG Manager and CSFPD Manager",
+        "Proponent Dept. Manager,TSD Manager,ENG Manager and CSFPD Manager"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "What is the purpose of the ESD?",
+
+    options: [
+        "To make sure equipment running safely",
+        "To start the equipment in AUTO mode",
+        "To convert the signal from pnumatic to electrical",
+        "To prevent equipment from damage"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "One of the follwing is Shift Supervisor main responsibility...'",
+
+    options: [
+        "Prepare operator training.",
+        "Attend meeting",
+        "Plan Turnaround and Inspection activities",
+        "Request for maintenance, Issuing and Closing of work permit"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "When does the sectional safety meeting is conducted?",
+
+    options: [
+        "Monthly",
+        "Weekly",
+        "Quaterly",
+        "Yearly"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "Where is the Incident commander post during emergency?",
+
+    options: [
+        "Cold Zone",
+        "Warm zone",
+        "Hot zone",
+        "Inside PIB or CCR"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "What is MERP?",
+
+    options: [
+        "Master Emergency Response Plan",
+        "Maintenance Emergency Response Procedure",
+        "Major Emergency Recovery Plan",
+        "Management Emergency Response Program"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "CO2 extinguisher extinguishes fire by:",
+
+    options: [
+        "Cooling",
+        "Replace O2 and smothering",
+        "Removing fuel source",
+        "Water dilution"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Hydrogen characteristic:",
+
+    options: [
+        "Highly flammable",
+        "Non flammable",
+        "Heavier than air",
+        "Toxic only"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "How is siren sound if accident already normalized?",
+
+    options: [
+        "Short intermittent sound",
+        "Long continuous 1 minute",
+        "Continuous 30 seconds",
+        "Two short blasts"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "ABRASIVE BLASTING REQUIRES WHICH TYPE OF SAFETY EQUIPMENT TO BE USED?",
+
+    options: [
+        "Foot and skin protection",
+        "Skin and back protection",
+        "Hearing protection and eye protection",
+        "Eye, skin and respiratory protection"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "Which of the following activity is carried out by the work permit receiver and the work permit issuer before issuing the work permit?",
+
+    options: [
+        "Call for an OME meeting",
+        "Conduct process hazard analysis",
+        "Conduct joint site inspection",
+        "Conduct a Management of Change (MOC)"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What are the basic information which should be legibly written on the LOTO tag?",
+
+    options: [
+        "Personal phone number and name",
+        "Plant number/location, date and time of lockout, badge number, organization, contact phone, signature and reason for installation",
+        "Name and code number",
+        "Cost center code and equipment number"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Which type of information can you find in a Chemical Hazard Bulletin (CHB)?",
+
+    options: [
+        "Precautions to handle the chemical safely",
+        "The causes of major chemical accidents",
+        "List of all hazardous chemicals",
+        "How and where the chemical is stored"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "What is the purpose of blinding?",
+
+    options: [
+        "Prevent air from passing",
+        "Identify removed equipment",
+        "Allow welding in hot area",
+        "Prevent liquid and/or gas from passing"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "At which depth excavation or trenches will meet the confined space definition?",
+
+    options: [
+        "Deeper than 1.2 m (4 ft)",
+        "Deeper than 1.0 m",
+        "Deeper than 1 ft",
+        "Any depth exceeding 0.6 m (2 ft)"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "What information must gas tester enter on the work permit?",
+
+    options: [
+        "His name",
+        "Gas test result, name, badge number and date & time of gas test",
+        "Plant name and equipment number",
+        "Section head ID"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Why is relief valve provided on equipment?",
+
+    options: [
+        "To prevent corrosion",
+        "To empty equipment",
+        "To release high pressure beyond set limits",
+        "To release high temperature"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "The Emergency Shutdown (ESD) system is designed to protect:",
+
+    options: [
+        "Personnel",
+        "Personnel, plant, equipment and environment",
+        "Plant and equipment",
+        "Environment"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "Emergency Shutdown (ESD) trips shall be reset:",
+
+    options: [
+        "Upon addressing the root cause of trip",
+        "Without investigation",
+        "Automatically",
+        "None of the above"
+    ],
+
+    correct: 0
+},
+
+{
+    question: "What is the function of MOS (Maintenance Override Switch)?",
+
+    options: [
+        "Bypassing ESD for operation purposes",
+        "Carrying plant maintenance by affecting plant performance",
+        "Carrying maintenance jobs without affecting plant performance",
+        "None of the above"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What does DIRC stand for?",
+
+    options: [
+        "Direct Improvement Regular Course",
+        "Driving Improvement Regular Course",
+        "Driver Improvement Refresher Course",
+        "Driver Improvement Regular Course"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What is Hazard Register?",
+
+    options: [
+        "A list of incidents that took place in previous year",
+        "A list of hazards with their potential effects and assessed risks",
+        "A list of on-job injuries",
+        "All of the above"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "What is Risk?",
+
+    options: [
+        "Not knowing what is around the corner",
+        "Something you are not sure about",
+        "A problem that is going to upset you",
+        "Likelihood that harm from a hazard may be realized"
+    ],
+
+    correct: 3
+},
+
+{
+    question: "What does LTI mean?",
+
+    options: [
+        "Least Time Injury Incident",
+        "Lost Time Injury Incident",
+        "Last True Injury Incident",
+        "Lost Time Incident Rate"
+    ],
+
+    correct: 1
+},
+
+{
+    question: "HAZOP is a technique for:",
+
+    options: [
+        "A safety audit",
+        "Preparing P&ID diagram",
+        "Qualitative risk analysis",
+        "None of the above"
+    ],
+
+    correct: 2
+},
+
+{
+    question: "What is GFCI when used in the context of electrical safety?",
+
+    options: [
+        "Ground Failure Circuit Initiator",
+        "General Formula Cellular Link",
+        "Field Filled Cylinder Insulator",
+        "Ground Fault Circuit Interrupter"
+    ],
+
+    correct: 3
+},
+
+
+
+{
+    question: "Why is relief valve provided on equipment?",
+
+    options: [
+        "To prevent corrosion",
+        "To empty equipment",
+        "To release high pressure beyond set limits",
+        "To release high temperature"
+    ],
+
+    correct: 2
 }
+
 
 ];
 
