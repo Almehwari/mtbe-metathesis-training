@@ -1,0 +1,216 @@
+/* ============================================================
+   MOBILE DASHBOARD EXPERIENCE  (max-width: 768px only)
+   Desktop layout is untouched. All rules below are scoped to
+   phones and small tablets and do not affect desktop.
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* ---------- HERO BANNER: compact, branding preserved ---------- */
+
+    .hero-banner {
+        padding: 14px 16px;
+        margin-bottom: 14px;
+        border-radius: 14px;
+    }
+
+    .hero-banner h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .hero-banner .subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .hero-banner .version {
+        font-size: 11px;
+        margin: 2px 0;
+    }
+
+    .hero-banner .developer {
+        font-size: 11px;
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+
+    /* ---------- PAGE CONTAINER: tighter spacing ---------- */
+
+    .container {
+        padding: 14px;
+        max-width: 100%;
+    }
+
+    .content-box {
+        padding: 14px;
+        margin-top: 6px;
+        border-radius: 14px;
+    }
+
+    /* ---------- DASHBOARD MODULE CARDS: 2x2 grid ---------- */
+
+    .dashboard-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 14px;
+    }
+
+    .dashboard-cards .module-card {
+        min-width: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+        min-height: 190px !important;
+        padding: 16px 12px !important;
+        flex: auto !important;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    /* ---------- MODULE CARD INNER ELEMENTS ---------- */
+
+    .dashboard-cards .module-card h3,
+    .dashboard-cards .module-card > div > div {
+        font-size: 18px !important;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    .dashboard-cards .module-card p {
+        font-size: 13px !important;
+        margin-top: 10px !important;
+        margin-bottom: 12px !important;
+        line-height: 1.5;
+    }
+
+    .dashboard-cards .module-card button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 14px;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto !important;
+    }
+
+    /* ---------- DASHBOARD HEADER / DESCRIPTION ---------- */
+
+    .dashboard-header {
+        margin-bottom: 8px;
+    }
+
+    .dashboard-title-badge {
+        font-size: 16px !important;
+        padding: 8px 20px !important;
+    }
+
+    .dashboard-description {
+        font-size: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard-page-title {
+        font-size: 18px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .dashboard-page-subtitle {
+        font-size: 12px !important;
+        margin-top: 2px !important;
+        margin-bottom: 14px !important;
+        margin-left: 0 !important;
+        letter-spacing: 2px !important;
+    }
+
+    /* ---------- FOOTER TAGLINE ---------- */
+
+    .dashboard-footer {
+        font-size: 11px !important;
+        letter-spacing: 2px !important;
+        margin-top: 14px !important;
+    }
+
+
+.mobile-nav-buttons{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin-bottom:12px;
+}
+
+.mobile-nav-buttons button{
+    margin:0 !important;
+    flex:1;
+    width:auto !important;
+    font-size:13px !important;
+    white-space:nowrap;
+    padding:8px 6px !important;
+}
+
+
+/* ---------- SMALLER PHONES (<= 360px): keep 2x2, tighten gaps ---------- */
+
+@media (max-width: 360px) {
+
+    .dashboard-cards {
+        gap: 10px;
+    }
+
+    .dashboard-cards .module-card {
+        padding: 12px 10px;
+        min-height: 175px;
+    }
+
+    .dashboard-cards .module-card h3,
+    .dashboard-cards .module-card > div > div {
+        font-size: 16px !important;
+    }
+
+    .hero-banner h1 {
+        font-size: 20px;
+    }
+}
+
+/* ---------- MTBE / METATHESIS / MERGE Roles Mobile ---------- */
+
+.hero-banner{
+    margin-bottom:10px !important;
+    padding:22px 18px !important;
+}
+
+.content-box{
+    padding:18px 14px 8px 14px !important;
+}
+
+.training-menu{
+    gap:12px;
+    margin-top:12px !important;
+}
+
+.training-card{
+    width:100% !important;
+    max-width:320px !important;
+    padding:14px !important;
+}
+
+.training-icon{
+    font-size:26px !important;
+    margin-bottom:6px !important;
+}
+
+.training-title{
+    font-size:20px !important;
+    margin-bottom:4px !important;
+}
+
+.training-description{
+    font-size:12px !important;
+}
+
+}
