@@ -10,14 +10,14 @@ function showHome() {
       <div class="content-box">
 
                               <!-- DASHBOARD HEADER -->
-<div style="
+<div class="dashboard-header" style="
 text-align:center;
 margin-bottom:10px;
 ">
 
                               <!-- DASHBOARD TITLE BADGE -->
 
-    <div style="
+    <div class="dashboard-title-badge" style="
     display:inline-block;
     padding:12px 28px;
     border-radius:999px;
@@ -33,7 +33,8 @@ margin-bottom:10px;
 
                               <!-- DASHBOARD DESCRIPTION -->
 
-<p style="
+<p class="dashboard-description"
+style="
 text-align:center;
 color:#94a3b8;
 font-size:14px;
@@ -44,58 +45,53 @@ margin-bottom:20px;
 Train • Practice • Assess
 </p>
 
-                              <!-- DASHBOARD PAGE TITLE -->
+<!-- DASHBOARD PAGE TITLE -->
 
-<h2 style="
+<h2 class="dashboard-page-title" style="
 margin-bottom:4px;
 ">
 Training Modules
 </h2>
 
-                              <!-- DASHBOARD PAGE SUBTITLE -->
+<!-- DASHBOARD PAGE SUBTITLE -->
 
-<p style="
+<p class="dashboard-page-subtitle"
+style="
 color:#94a3b8;
-font-size:12px;
+font-size:14px;
 opacity:0.75;
 margin-top:4px;
 margin-bottom:25px;
+font-size:14px;
+margin-left:20px;
+letter-spacing:4px;
+opacity:0.75;
+letter-spacing:4px;
 ">
-
-CO • FO • SSV Training Modules
-
+FO • CO • SSV
 </p>
-
                               <!-- DASHBOARD MODULE CARDS CONTAINER -->
 
-<div style="
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-margin-top:20px;
-">
+<div class="dashboard-cards">
 
 
+<!-- ================= MTBE CARD ================= -->
 
-<!-- ================= MTBE CARD ==================================================================== -->
-
-
-<div class="module-card" style="
+<div
+class="module-card"
+style="
 background:#0d47a1;
 padding:20px;
 border-radius:12px;
 min-width:190px;
 max-width:190px;
-min-height:340px;
+min-height:260px;
 flex:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 transition:0.3s;
 ">
 
-
-
-
-                              <!-- MTBE MODULE HEADER -->
+    <!-- MTBE MODULE HEADER -->
 
     <div style="
     padding-bottom:10px;
@@ -104,594 +100,293 @@ transition:0.3s;
     text-align:center;
     ">
 
-                              <!-- MTBE MODULE TITLE -->
 
-        <div style="
-        font-size:24px;
-        font-weight:bold;
-        letter-spacing:1px;
-        ">
-        📘 MTBE
-        </div>
+        <!-- MTBE MODULE TITLE -->
 
-        </div>
-
-                              <!-- MTBE ROLE CARD : FO -->
-
-    <div
-    class="action-tile"
-    onclick="setMTBERole('FO')"
-    style="
-    background:#0b3d91;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👷 FO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Field Operator
-        </div>
-
-    </div>
-
-                              <!-- MTBE ROLE CARD : CO -->
-
-    <div
-    class="action-tile"
-    onclick="setMTBERole('CO')"
-    style="
-    background:#0b3d91;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👨‍💻 CO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Console Operator
-        </div>
-
-    </div>
-
-                              <!-- MTBE ROLE CARD : SSV -->
-
-    <div
-    class="action-tile"
-    onclick="setMTBERole('SSV')"
-    style="
-    background:#0b3d91;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        🧑‍💼 SSV
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Shift Supervisor
-        </div>
-
-    </div>
-
-                              <!-- MTBE MODULE FOOTER -->
-
-    <p style="
-    font-size:12px;
-    color:#94a3b8;
-    margin-top:15px;
-    text-align:center;
-    letter-spacing:1px;
-    ">
-    Select Position
-    </p>
+        <div
+style="
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+">
+📘 MTBE
+</div>
 
 </div>
 
-                     <!-- ============ METATHESIS CARD ============= -->
+    <!-- MTBE MODULE INFORMATION -->
+
+<p
+style="
+text-align:center;
+color:#dbeafe;
+font-size:14px;
+margin-top:45px;
+margin-bottom:30px;
+line-height:1.8;
+">
+FO • CO • SSV
+</p>
+
+<button
+onclick="showMTBERoles()"
+style="
+width:80%;
+padding:14px;
+display:block;
+margin:0 auto;
+background:#0b3d91;
+border:none;
+border-radius:10px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+box-shadow:0 0 10px rgba(255,255,255,0.05);
+">
+Enter Module
+</button>
 
 
+</div>
 
-<div class="module-card" style="
+<!-- ================= METATHESIS CARD ================= -->
+
+<div
+class="module-card"
+style="
 background:#2e7d32;
 padding:20px;
 border-radius:12px;
 min-width:190px;
 max-width:190px;
-min-height:340px;
+min-height:260px;
 flex:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 transition:0.3s;
-cursor:pointer;
 ">
 
-                              <!-- METATHESIS MODULE HEADER -->
+    <!-- METATHESIS MODULE HEADER -->
 
-    <div style="
-    padding-bottom:10px;
-    margin-bottom:15px;
-    border-bottom:1px solid rgba(255,255,255,0.15);
-    text-align:center;
-    ">
+<div
+style="
+padding-bottom:10px;
+margin-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,0.15);
+text-align:center;
+">
 
-                              <!-- METATHESIS MODULE TITLE -->
 
-        <div style="
-        font-size:21px;
-        font-weight:bold;
-        letter-spacing:1px;
-        ">
-        📗 METATHESIS
-        </div>
+        <!-- METATHESIS MODULE TITLE -->
 
-    </div>
-
-                              <!-- METATHESIS ROLE CARD : FO -->
-
-    <div
-    class="action-tile"
-    onclick="setMetathesisRole('FO')"
-    style="
-    background:#1f6b2a;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👷 FO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Field Operator
-        </div>
-
-    </div>
-
-                              <!-- METATHESIS ROLE CARD : CO -->
-
-    <div
-    class="action-tile"
-    onclick="setMetathesisRole('CO')"
-    style="
-    background:#1f6b2a;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👨‍💻 CO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Console Operator
-        </div>
-
-    </div>
-
-                              <!-- METATHESIS ROLE CARD : SSV -->
-
-    <div
-    class="action-tile"
-    onclick="setMetathesisRole('SSV')"
-    style="
-    background:#1f6b2a;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        🧑‍💼 SSV
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Shift Supervisor
-        </div>
-
-    </div>
-
-                              <!-- METATHESIS MODULE FOOTER -->
-
-    <p style="
-    font-size:12px;
-    color:#94a3b8;
-    margin-top:15px;
-    text-align:center;
-    letter-spacing:1px;
-    ">
-    Select Position
-    </p>
+<div
+style="
+font-size:22px;
+font-weight:bold;
+letter-spacing:1px;
+">
+📗 METATHESIS
+</div>
 
 </div>
-                              <!-- ============= SAFETY CARD ============== -->
+
+<p 
+style="
+text-align:center;
+color:#dbeafe;
+font-size:14px;
+margin-top:45px;
+margin-bottom:30px;
+line-height:1.8;
+">
+FO • CO • SSV
+</p>
+
+<button
+onclick="showMetathesisRoles()"
+style="
+width:80%;
+padding:14px;
+display:block;
+margin:0 auto;
+background:#1e6b29;
+border:none;
+border-radius:10px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+box-shadow:0 0 10px rgba(255,255,255,0.05);
+">
+Enter Module
+</button>
+
+
+
+</div>                              
+
+
+
+<!-- ============= SAFETY CARD ============== -->
 
 
                                         <!-- SAFETY MODULE CARD -->
 
-<div class="module-card" style="
+<div class="module-card"
+style="
 background:#be2d1f;
 padding:20px;
 border-radius:12px;
 min-width:190px;
 max-width:190px;
-min-height:340px;
+min-height:260px;
 flex:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 transition:0.3s;
-cursor:pointer;
 ">
 
-                                         <!-- SAFETY MODULE HEADER -->
+        <!-- SAFETY MODULE HEADER -->
 
-    <div style="
-    padding-bottom:10px;
-    margin-bottom:15px;
-    border-bottom:1px solid rgba(255,255,255,0.15);
-    text-align:center;
-    ">
+<div
+style="
+padding-bottom:10px;
+margin-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,0.15);
+text-align:center;
+">
 
         <!-- SAFETY MODULE TITLE -->
 
-        <div style="
-        font-size:24px;
-        font-weight:bold;
-        letter-spacing:1px;
-        ">
-        🦺 SAFETY
-        </div>
+<div
+style="
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+">
+🦺 SAFETY
+</div>
 
-    </div>
+</div>
 
-                                        <!-- SAFETY QUESTION BANK CARD -->
+        <!-- SAFETY MODULE INFORMATION -->
 
-    <div
-    class="action-tile"
-    onclick="showSafety()"
-    style="
-    background:#a62618;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
+<p
+style="
+text-align:center;
+color:#fecaca;
+font-size:14px;
+margin-top:45px;
+margin-bottom:30px;
+line-height:1.8;
+">
+Question Bank • Exams
+</p>
 
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        📚 Question Bank
-        </div>
+<button
+onclick="showSafetyMenu()"
+style="
+width:80%;
+padding:14px;
+display:block;
+margin:0 auto;
+background:#b91c1c;
+border:none;
+border-radius:10px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+box-shadow:0 0 10px rgba(255,255,255,0.05);
+">
+Enter Module
+</button>
 
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Study & Review Questions
-        </div>
-
-    </div>
-
-                                         <!-- SAFETY FULL EXAM CARD -->
-
-    <div
-    class="action-tile"
-    onclick="startSafety()"
-    style="
-    background:#a62618;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        📝 Full Exam
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Complete Assessment
-        </div>
-
-    </div>
-
-                                        <!-- SAFETY RANDOM EXAM CARD -->
-
-    <div
-    class="action-tile"
-    onclick="startRandomSAFETYExam()"
-    style="
-    background:#a62618;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        🎲 Random Exam
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Quick Practice
-        </div>
-
-    </div>
-
-                                         <!-- SAFETY MODULE FOOTER -->
-
-    <p style="
-    font-size:12px;
-    color:#94a3b8;
-    margin-top:15px;
-    text-align:center;
-    letter-spacing:1px;
-    ">
-    Study • Practice • Assess
-    </p>
 
 </div>
                                     <!-- ======= Merge CARD ========== -->
 
-<!-- MERGE MODULE CARD -->
 
-<div class="module-card" style="
-background:#5b21b6;
+<div class="module-card"
+style="
+background:#7c3aed;
 padding:20px;
 border-radius:12px;
 min-width:190px;
 max-width:190px;
-min-height:340px;
+min-height:260px;
 flex:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 transition:0.3s;
-cursor:pointer;
 ">
 
-                                        <!-- MERGE MODULE HEADER -->
+        <!-- MERGE MODULE HEADER -->
 
-    <div style="
-    padding-bottom:10px;
-    margin-bottom:15px;
-    border-bottom:1px solid rgba(255,255,255,0.15);
-    text-align:center;
-    ">
+<div
+style="
+padding-bottom:10px;
+margin-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,0.15);
+text-align:center;
+">
 
-                                            <!-- MERGE MODULE TITLE -->
 
-        <div style="
-        font-size:24px;
-        font-weight:bold;
-        letter-spacing:1px;
-        ">
-        🎯 MERGE
-        </div>
 
-                                            <!-- MERGE MODULE DESCRIPTION -->
+        <!-- MERGE MODULE TITLE -->
 
-        <div style="
-        font-size:12px;
-        opacity:0.8;
-        margin-top:6px;
-        ">
-        MTBE + META + SAFETY
-        </div>
+<div
+style="
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+">
+🎯 MERGE
+</div>
 
-    </div>
+</div>
 
-                                        <!-- MERGE ROLE CARD : FO -->
+<p
+style="
+text-align:center;
+color:#dbeafe;
+font-size:14px;
+margin-top:45px;
+margin-bottom:30px;
+line-height:1.8;
+">
+FO • CO • SSV
+</p>
 
-    <div
-    class="action-tile"
-    onclick="setMergeRole('FO')"
-    style="
-    background:#4c1d95;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
+<button
+onclick="showMergeRoles()"
+style="
+width:75%;
+padding:14px;
+display:block;
+margin:0 auto;
+background:#5b21b6;
+border:none;
+border-radius:10px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+box-shadow:0 0 10px rgba(255,255,255,0.05);
+">
+Enter Module
+</button>
 
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👷 FO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Field Operator
-        </div>
-
-    </div>
-
-                                        <!-- MERGE ROLE CARD : CO -->
-
-    <div
-    class="action-tile"
-    onclick="setMergeRole('CO')"
-    style="
-    background:#4c1d95;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        👨‍💻 CO
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Console Operator
-        </div>
-
-    </div>
-
-                                        <!-- MERGE ROLE CARD : SSV -->
-
-    <div
-    class="action-tile"
-    onclick="setMergeRole('SSV')"
-    style="
-    background:#4c1d95;
-    padding:12px;
-    border-radius:10px;
-    margin-top:8px;
-    cursor:pointer;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-    ">
-
-        <div style="
-        font-size:16px;
-        font-weight:bold;
-        ">
-        🧑‍💼 SSV
-        </div>
-
-        <div style="
-        font-size:13px;
-        opacity:0.85;
-        margin-top:4px;
-        ">
-        Shift Supervisor
-        </div>
-
-    </div>
-
-    <!-- MERGE MODULE FOOTER -->
-
-    <p style="
-    font-size:12px;
-    color:#94a3b8;
-    margin-top:15px;
-    text-align:center;
-    letter-spacing:1px;
-    ">
-    Merge Assessment
-    </p>
 
 </div>
 
 </div>
+
+<p class="dashboard-footer" style="
+font-size:12px;
+letter-spacing:3px;
+opacity:0.45;
+text-align:center;
+margin-top:5px;
+color:#94a3b8;
+">
+Knowledge • Safety • Performance
+</p>
+
 
 `;
 
@@ -703,7 +398,7 @@ cursor:pointer;
 function showMTBERoles() {
 
     document.getElementById("content").innerHTML = `
-
+<div class="content-box">
 
                                   <!-- NAVIGATION BUTTONS -->
 
@@ -1000,13 +695,18 @@ function showMTBEMenu() {
 
                               <!-- MTBE MENU NAVIGATION BUTTONS -->
 
+<div class="mobile-nav-buttons">
+
 <button onclick="showHome()">
-    🏠 Main Dashboard
+🏠 Main Dashboard
 </button>
 
 <button onclick="showMTBERoles()">
-    ↩️ MTBE Dashboard
+↩️ MTBE Dashboard
 </button>
+
+</div>
+
 
                               <!-- MTBE MENU PAGE TITLE -->
 
@@ -1105,14 +805,18 @@ function showMetathesisMenu() {
 
                               <!-- METATHESIS MENU NAVIGATION BUTTONS -->
 
+<div class="mobile-nav-buttons">
+
 <button onclick="showHome()">
-    🏠 Main Dashboard
+🏠 Main Dashboard
 </button>
 
 <button onclick="showMetathesisRoles()">
-    ↩️ METATHESIS Dashboard
+↩️ METATHESIS Dashboard
 </button>
 
+
+</div>
                               <!-- METATHESIS MENU PAGE TITLE -->
 
 <h2 style="
@@ -1354,13 +1058,17 @@ function showMergeMenu() {
 
                               <!-- MERGE MENU NAVIGATION BUTTONS -->
 
+<div class="mobile-nav-buttons">
+
 <button onclick="showHome()">
-    🏠 Main Dashboard
+🏠 Main Dashboard
 </button>
 
 <button onclick="showMergeRoles()">
-    ↩️ Merge Dashboard
+↩️ MERGE Dashboard
 </button>
+
+</div>
 
                               <!-- MERGE MENU PAGE TITLE -->
 
@@ -1576,6 +1284,8 @@ if (currentPage === "safety") {
                                               // MTBE QUESTION BANK PAGE
                                              // ======================
 
+
+
 function showMTBE() {
 
     currentPage = "mtbe";
@@ -1586,7 +1296,7 @@ function showMTBE() {
 
     <div class="content-box">
 
-                              <!-- MTBE QUESTION BANK NAVIGATION BUTTONS -->
+    <div class="mobile-nav-buttons">
 
     <button onclick="showHome()">
         🏠 Main Dashboard
@@ -1596,9 +1306,12 @@ function showMTBE() {
         ↩️ Back to Menu
     </button>
 
+    </div>
+
     <br><br>
 
-                              <!-- MTBE QUESTION BANK PAGE HEADER -->
+    <!-- MTBE QUESTION BANK PAGE HEADER -->
+
 
     <div style="
     background:#1e3a8a;
@@ -1819,6 +1532,9 @@ function showMeta() {
 
                                     <!-- METATHESIS QUESTION BANK NAVIGATION BUTTONS -->
 
+
+<div class="mobile-nav-buttons">
+
 <button onclick="showHome()">
     🏠 Main Dashboard
 </button>
@@ -1826,6 +1542,8 @@ function showMeta() {
 <button onclick="showMetathesisMenu()">
     ↩️ Back to Menu
 </button>
+
+</div>
 
 <br><br>
 
@@ -2185,15 +1903,20 @@ function showSafety() {
 
                                     <!-- SAFETY QUESTION BANK NAVIGATION BUTTONS -->
 
-        <button onclick="showHome()">
-            🏠 Main Dashboard
-        </button>
 
-        <button onclick="showSafetyMenu()">
-            ↩️ Back to Safety Menu
-        </button>
+<div class="mobile-nav-buttons">
 
-        <br><br>
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+<button onclick="showSafetyMenu()">
+    ↩️ Back to Safety Menu
+</button>
+
+</div>
+
+<br><br>
 
                                     <!-- SAFETY QUESTION BANK PAGE HEADER -->
 
@@ -2327,15 +2050,20 @@ function showMergeQuestionBank() {
 
                                     <!-- MERGE QUESTION BANK NAVIGATION BUTTONS -->
 
-        <button onclick="showHome()">
-            🏠 Main Dashboard
-        </button>
 
-        <button onclick="showMergeMenu()">
-            ↩️ Back to Menu
-        </button>
+<div class="mobile-nav-buttons">
 
-        <br><br>
+<button onclick="showHome()">
+    🏠 Main Dashboard
+</button>
+
+<button onclick="showMergeMenu()">
+    ↩️ Back to Menu
+</button>
+
+</div>
+
+<br><br>
 
                                     <!-- MERGE QUESTION BANK PAGE HEADER -->
 
@@ -2485,7 +2213,7 @@ let currentQuestions = [];
 let currentQuestion = 0;
 let score = 0;
 let examTitle = "";
-
+let answerSubmitted = false;
 
                                             // ======================
                                            // MTBE FULL EXAM INITIALIZER
@@ -2664,6 +2392,7 @@ function showQuestion() {
     // CURRENT QUESTION DATA
 
     const q = currentQuestions[currentQuestion];
+    answerSubmitted = false;
 
                                     
                                     // EXAM COLOR THEME
@@ -2694,28 +2423,33 @@ function showQuestion() {
 
                                     <!-- QUESTION ENGINE NAVIGATION BUTTONS -->
 
-        <button onclick="showHome()">
-        🏠 Main Dashboard
-        </button>
 
-        <button onclick="
-        if (examTitle.includes('MTBE')) {
-            showMTBEMenu();
-        }
-        else if (examTitle.includes('METATHESIS')) {
-            showMetathesisMenu();
-        }
-        else if (examTitle.includes('Merge')) {
-            showMergeMenu();
-        }
-        else if (examTitle.includes('Safety')) {
-            showSafetyMenu();
-        }
-        ">
-        ↩️ Back to Menu
-        </button>
+<div class="mobile-nav-buttons">
 
-        <br><br>
+<button onclick="showHome()">
+🏠 Main Dashboard
+</button>
+
+<button onclick="
+if (examTitle.includes('MTBE')) {
+    showMTBEMenu();
+}
+else if (examTitle.includes('METATHESIS')) {
+    showMetathesisMenu();
+}
+else if (examTitle.includes('Merge')) {
+    showMergeMenu();
+}
+else if (examTitle.includes('Safety')) {
+    showSafetyMenu();
+}
+">
+↩️ Back to Menu
+</button>
+
+</div>
+
+<br><br>
 
                                     <!-- QUESTION ENGINE EXAM HEADER -->
 
@@ -2766,6 +2500,20 @@ max-width:760px;
     : `Full Exam • ${currentQuestions.length} Questions`}
     </p>
 
+
+
+                                    <!-- QUESTION ENGINE PROGRESS INDICATOR -->
+
+<p style="
+margin:8px 0 0 0;
+font-size:14px;
+font-weight:bold;
+color:#ffffff;
+">
+Question ${currentQuestion + 1} of ${currentQuestions.length}
+</p>
+
+
                                     <!-- QUESTION ENGINE WARNING CONTAINER -->
 
     <div id="warningBox" style="
@@ -2806,18 +2554,20 @@ q.options.forEach((option, i) => {
 
                                     <!-- QUESTION ENGINE ANSWER OPTION -->
 
-        <p style="
-        margin:12px 0;
-        ">
+<label style="
+display:block;
+margin:12px 0;
+cursor:pointer;
+">
 
-            <input
-            type="radio"
-            name="answer"
-            value="${i}">
+    <input
+    type="radio"
+    name="answer"
+    value="${i}">
 
-            ${String.fromCharCode(65 + i)}. ${option}
+    ${String.fromCharCode(65 + i)}. ${option}
 
-        </p>
+</label>
 
     `;
 
@@ -2936,6 +2686,7 @@ function checkAnswer() {
     q.correct !== undefined
     ? q.correct
     : q.options.indexOf(q.answer);
+    answerSubmitted = true;
 
                                     
                                     // CORRECT ANSWER HANDLER
@@ -3057,16 +2808,17 @@ function nextQuestion() {
     );
 
    
-                                     // VALIDATE ANSWER SUBMISSION
 
-    if (!selected) {
+                                    // VALIDATE ANSWER SUBMISSION
 
-        showWarning(
-            "Please submit your answer first ⚠️"
-        );
+if (!answerSubmitted) {
 
-        return;
-    }
+    showWarning(
+        "Please submit your answer first ⚠️"
+    );
+
+    return;
+}
 
 
 
